@@ -1,8 +1,8 @@
 # Exercise 6
 
-In this exercise, you will
+In this exercise, you will create a ServiceAccount and assign it to a Pod.
 
-## Using a Service Account
+## Using a ServiceAccount
 
 1. Create a new service account named `backend-team`.
 2. Print out the token for the service account in YAML format.

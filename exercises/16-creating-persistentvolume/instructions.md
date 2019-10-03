@@ -1,6 +1,6 @@
 # Exercise 16
 
-In this exercise, you will
+In this exercise, you will create a PersistentVolume, connect it to a PersistentVolumeClaim and mount the claim to a specific path of a Pod.
 
 ## Defining and Mounting a PersistentVolume
 

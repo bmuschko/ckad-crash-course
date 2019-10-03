@@ -1,6 +1,6 @@
 # Exercise 10
 
-In this exercise, you will
+In this exercise, you will training your debugging skills by inspecting and fixing a misconfigured Pod.
 
 ## Fixing a Misconfigured Pod
 

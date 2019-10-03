@@ -74,7 +74,7 @@ myapp        NodePort    10.108.88.208   <none>        80:30441/TCP   3m
 
 Run a `wget` or `curl` command against the service using port `30441`. On Docker for Windows/Mac you may have to use localhost or 127.0.0.1 (see [issue](https://github.com/docker/for-win/issues/1950)).
 
-```bash
+```shell
 $ wget -O- localhost:30441
 --2019-05-10 16:32:35--  http://localhost:30441/
 Resolving localhost (localhost)... ::1, 127.0.0.1

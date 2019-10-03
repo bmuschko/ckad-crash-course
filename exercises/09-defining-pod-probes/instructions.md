@@ -1,6 +1,6 @@
 # Exercise 9
 
-In this exercise, you will
+In this exercise, you will create a Pod running a NodeJS application. The Pod will define readiness and liveness probes with different parameters.
 
 ## Defining a Pod’s Readiness and Liveness Probe
 

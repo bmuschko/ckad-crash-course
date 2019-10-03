@@ -1,6 +1,6 @@
 # Exercise 5
 
-In this exercise, you will
+In this exercise, you will create a ResourceQuota with specific CPU and memory limits for a new namespace. Pods created in the namespace will have to adhere to those limits. 
 
 ## Defining a Pod’s Resource Requirements
 

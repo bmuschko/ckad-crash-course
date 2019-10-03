@@ -1,6 +1,6 @@
 # Exercise 13
 
-In this exercise, you will
+In this exercise, you will create a CronJob and render its executions.
 
 ## Creating a Scheduled Container Operation
 

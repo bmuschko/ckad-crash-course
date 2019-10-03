@@ -1,6 +1,6 @@
 # Exercise 8
 
-In this exercise, you will
+In this exercise, you will implement the adapter pattern for a multi-container Pod.
 
 ## Implementing the Adapter Pattern
 

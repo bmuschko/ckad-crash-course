@@ -1,6 +1,6 @@
 # Exercise 11
 
-In this exercise, you will
+In this exercise, you will exercise the use of labels and annotations for a set of Pods.
 
 ## Defining and Querying Labels and Annotations
 

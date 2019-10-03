@@ -1,6 +1,6 @@
 # Exercise 15
 
-In this exercise, you will
+In this exercise, you will set up a NetworkPolicy to restrict access to and from a Pod.
 
 ## Restricting Access to and from a Pod
 

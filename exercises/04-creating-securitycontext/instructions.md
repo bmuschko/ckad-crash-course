@@ -1,6 +1,6 @@
 # Exercise 4
 
-In this exercise, you will
+In this exercise, you will create a Pod that defines a filesystem group ID as security context. Based on this security context, you'll create a new file and inspect the outcome of the file creation based on the rule defined earlier.
 
 ## Creating a Security Context for a Pod
 
