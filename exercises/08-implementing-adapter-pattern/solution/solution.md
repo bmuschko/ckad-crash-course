@@ -1,7 +1,9 @@
 # Solution
 
+You can create the initial Pod setup with the following command.
+
 ```shell
-kubectl run adapter --image=busybox --restart=Never -o yaml --dry-run -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;' > adapter.yaml
+$ kubectl run adapter --image=busybox --restart=Never -o yaml --dry-run -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;' > adapter.yaml
 ```
 The final Pod YAML file should look something like this:
 
@@ -39,6 +41,7 @@ spec:
   restartPolicy: Never
 status: {}
 ```
+You should find that a new text file in the current directory every 20 seconds. Each of the files contain the disk space without the date prefix.
 
 ```shell
 $ kubectl exec adapter --container=transformer -it -- /bin/sh
