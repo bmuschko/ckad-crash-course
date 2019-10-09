@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
 
   var rawdata = fs.readFileSync('/usr/shared/app/config.json');
   var json = JSON.parse(rawdata);
-  res.end(`Database URL: ${json.dbConfig.host}:${json.dbConfig.port}/${json.dbConfig.dbName}`);
+  res.end(`Database URL: ${json.dbConfig.host}:${json.dbConfig.port}/${json.dbConfig.dbName}\n`);
 });
 
 server.listen(port, hostname, () => {
