@@ -139,8 +139,8 @@ Once the application is running, shell into the container. The mounted volume pa
 
 ```shell
 $ kubectl exec business-app -it -- /bin/sh
-&#35; ls /usr/shared/app
+# ls /usr/shared/app
 config.json
-&#35; curl localhost:8080
+# curl localhost:8080
 Database URL: localhost:5432/customers
 ```
