@@ -45,11 +45,11 @@ You should find that a new text file in the current directory every 20 seconds. 
 
 ```shell
 $ kubectl exec adapter --container=transformer -it -- /bin/sh
-/ # ls -l
+# ls -l
 -rw-r--r--    1 root     root           205 May 12 20:43 2019-05-12-20-43-32-transformed.txt
 -rw-r--r--    1 root     root           369 May 12 20:43 2019-05-12-20-43-52-transformed.txt
 ...
-/ # cat 2019-05-12-20-43-52-transformed.txt
+# cat 2019-05-12-20-43-52-transformed.txt
  4.0K	/root
  4.0K	/root
  4.0K	/root
@@ -67,5 +67,5 @@ $ kubectl exec adapter --container=transformer -it -- /bin/sh
  4.0K	/root
  4.0K	/root
  4.0K	/root
-/ # exit
+# exit
 ```

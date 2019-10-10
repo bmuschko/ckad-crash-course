@@ -47,7 +47,7 @@ You can find the environment variable by shelling into the container and running
 
 ```shell
 $ kubectl exec -it backend -- /bin/sh
-/ # env
+# env
 DB_PASSWORD=passwd
-/ # exit
+# exit
 ```

@@ -40,9 +40,9 @@ Create the Pod and log into the container. Create the file in the directory of t
 $ kubectl create -f secured.yaml
 pod/secured created
 $ kubectl exec -it secured -- sh
-/ # cd /data/app
-/ # touch logs.txt
-/ # ls -l
+# cd /data/app
+# touch logs.txt
+# ls -l
 -rw-r--r-- 1 root 3000 0 Mar 11 15:56 logs.txt
-/ # exit
+# exit
 ```

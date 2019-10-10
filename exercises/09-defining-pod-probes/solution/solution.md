@@ -46,7 +46,7 @@ Create the Pod from the YAML file, shell into the Pod as soon as it is running a
 $ kubectl create -f pod.yaml
 pod/hello created
 $ kubectl exec hello -it -- /bin/sh
-/ # curl localhost:3000
+# curl localhost:3000
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +66,7 @@ $ kubectl exec hello -it -- /bin/sh
 	</div>
 </body>
 </html>
-/ # exit
+# exit
 
 $ kubectl logs pod/hello
 Magic happens on port 3000
