@@ -11,3 +11,4 @@ Kubernetes runs an init container before the main container. In this scenario, t
 3. Edit the YAML file by providing the command for the init container. The init container should run a `wget` command for downloading the file `https://raw.githubusercontent.com/bmuschko/ckad-crash-course/master/exercises/07-creating-init-container/app/config/config.json` into the directory `/usr/shared/app`.
 4. Start the Pod and ensure that it is up and running.
 5. Run the command `curl localhost:8080` from the main application container. The response should render a database URL derived off the information in the configuration file.
+6. (Optional) Discuss: How would you approach a debugging a failing command inside of the init container?

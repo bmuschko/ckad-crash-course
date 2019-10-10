@@ -10,3 +10,4 @@ In this exercise, you will a Deployment and expose a container port for its Pods
 4. Change the service type so that the Pods can be reached from outside of the cluster.
 5. Run a `wget` command against the service from outside of the cluster.
 6. (Optional) Discuss: Can you expose the Pods as a service without a deployment?
+7. (Optional) Discuss: Under what condition would you use the service type `LoadBalancer`?

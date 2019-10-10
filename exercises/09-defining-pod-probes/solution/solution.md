@@ -50,6 +50,9 @@ $ kubectl exec hello -it -- /bin/sh
 Hello World
 # exit
 
+Rendering the logs of the Pod reveals additional log output.
+
+```shell
 $ kubectl logs pod/hello
 Magic happens on port 3000
 ```
