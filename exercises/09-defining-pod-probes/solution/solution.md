@@ -3,7 +3,7 @@
 Create the intial YAML with the following command.
 
 ```shell
-$ kubectl run hello --image=bonomat/nodejs-hello-world --restart=Never --port=3000 -o yaml --dry-run > pod.yaml
+$ kubectl run hello --image=bmuschko/nodejs-hello-world:1.0.0 --restart=Never --port=3000 -o yaml --dry-run > pod.yaml
 ```
 
 Edit the YAML file and add the probes.
@@ -18,7 +18,7 @@ metadata:
   name: hello
 spec:
   containers:
-  - image: bonomat/nodejs-hello-world
+  - image: bmuschko/nodejs-hello-world:1.0.0
     name: hello
     ports:
     - name: nodejs-port
@@ -47,25 +47,7 @@ $ kubectl create -f pod.yaml
 pod/hello created
 $ kubectl exec hello -it -- /bin/sh
 # curl localhost:3000
-<!DOCTYPE html>
-<html>
-<head>
-	<title>NodeJS Docker Hello World</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/stylesheets/styles.css" rel="stylesheet">
-</head>
-<body>
-	<div class="container">
-		<div class="well well-sm">
-			<h2>This is just a hello world message</h2>
-			<img a href="./cage.jpg"/>
-			<img src="src/cage.jpg" alt="Smiley face" width="640">
-		</div>
-	</div>
-</body>
-</html>
+Hello World
 # exit
 
 $ kubectl logs pod/hello
