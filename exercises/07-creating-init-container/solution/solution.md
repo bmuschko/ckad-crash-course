@@ -3,7 +3,7 @@
 Start by generating the basic skeleton of the Pod.
 
 ```shell
-$ kubectl run business-app --image=bmuschko/node-read-config:1.0.0 --restart=Never --port=8080 -o yaml --dry-run > business-app.yaml
+$ kubectl run business-app --image=bmuschko/nodejs-read-config:1.0.0 --restart=Never --port=8080 -o yaml --dry-run > business-app.yaml
 ```
 
 You should end up with the following configuration:
@@ -18,7 +18,7 @@ metadata:
   name: business-app
 spec:
   containers:
-  - image: bmuschko/node-read-config:1.0.0
+  - image: bmuschko/nodejs-read-config:1.0.0
     name: business-app
     ports:
     - containerPort: 8080
@@ -41,7 +41,7 @@ spec:
   - name: configurer
     image: busybox
   containers:
-  - image: bmuschko/node-read-config:1.0.0
+  - image: bmuschko/nodejs-read-config:1.0.0
     name: web
     ports:
     - containerPort: 8080
@@ -67,7 +67,7 @@ spec:
     - name: configdir
       mountPath: "/usr/shared/app"
   containers:
-  - image: bmuschko/node-read-config:1.0.0
+  - image: bmuschko/nodejs-read-config:1.0.0
     name: web
     ports:
     - containerPort: 8080
@@ -104,7 +104,7 @@ spec:
     - name: configdir
       mountPath: "/usr/shared/app"
   containers:
-  - image: bmuschko/node-read-config:1.0.0
+  - image: bmuschko/nodejs-read-config:1.0.0
     name: web
     ports:
     - containerPort: 8080
