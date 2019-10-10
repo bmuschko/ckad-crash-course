@@ -56,9 +56,9 @@ You can shell into the container and run the `ls` command.
 
 ```shell
 $ kubectl exec mypod -it --namespace=ckad-prep  -- /bin/sh
-/ # ls
+# ls
 bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv  sys  tmp  usr  var
-/ # exit
+# exit
 ```
 
 Retrieve the IP address of the Pod with the `-o wide` command line option.
@@ -74,7 +74,7 @@ Remember to use the `--rm` to create a temporary Pod.
 ```shell
 $ kubectl run busybox --image=busybox --rm -it --restart=Never -n ckad-prep -- /bin/sh
 If you don't see a command prompt, try pressing enter.
-/ # wget -O- 192.168.60.149:80
+# wget -O- 192.168.60.149:80
 Connecting to 192.168.60.149:80 (192.168.60.149:80)
 <!DOCTYPE html>
 <html>
@@ -102,7 +102,7 @@ Commercial support is available at
 </body>
 </html>
 -                    100% |**********************************************************************|   612  0:00:00 ETA
-/ # exit
+# exit
 ```
 
 The logs of the Pod should show a single line indicating our request.

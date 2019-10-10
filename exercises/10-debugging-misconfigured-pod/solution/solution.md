@@ -31,14 +31,14 @@ Apparently, the directory we want to write to does not exist. Log into the conta
 
 ```shell
 $ kubectl exec failing-pod -it -- /bin/sh
-/ # mkdir -p ~/tmp/x
-/ # cd ~/tmp/x
-/ # ls -l
+# mkdir -p ~/tmp/x
+# cd ~/tmp/x
+# ls -l
 total 4
 -rw-r--r-- 1 root root 112 May  9 23:52 curr-date.txt
-/ # cat ~/tmp/x/curr-date.txt
+# cat ~/tmp/x/curr-date.txt
 Thu May 9 23:59:01 UTC 2019
 Thu May 9 23:59:06 UTC 2019
 Thu May 9 23:59:11 UTC 2019
-/ # exit
+# exit
 ```
