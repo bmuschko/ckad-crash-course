@@ -12,3 +12,4 @@ In this exercise, you will create a Deployment with multiple replicas. After ins
 6. Have a look at the Deployment rollout history.
 7. Revert the Deployment to revision 1.
 8. Ensure that the Pods use the image `nginx`.
+9. (Optional) Discuss: Can you foresee potential issues with a rolling deployment? How do you configure a update process that first kills all existing containers with the current version before it starts containers with the new version?
