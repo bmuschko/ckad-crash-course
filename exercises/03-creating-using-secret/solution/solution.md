@@ -51,3 +51,9 @@ $ kubectl exec -it backend -- /bin/sh
 DB_PASSWORD=passwd
 # exit
 ```
+
+## Optional
+
+>  What is one of the benefit of using a Secret over a ConfigMap?
+
+A Secret is distributed only to the nodes running Pods that actually require access to it. Moreover, Secrets are stored in memory and are never written to a physical storage.

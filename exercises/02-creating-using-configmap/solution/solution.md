@@ -53,3 +53,9 @@ DB_USERNAME=postgres
 ...
 # exit
 ```
+
+## Optional
+
+> How would you approach hot reloading of values defined by a ConfigMap consumed by an application running in Pod?
+
+Changes to environment variables are only reflected if the Pod is restarted. Alternatively, you can mount a ConfigMap as file and poll changes from the mounted file periodically, however, it requires the application to build in the logic.

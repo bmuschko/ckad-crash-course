@@ -144,3 +144,9 @@ config.json
 # curl localhost:8080
 Database URL: localhost:5432/customers
 ```
+
+## Optional
+
+> How would you approach a debugging a failing command inside of the init container?
+
+Adding a temporary `sleep` command to the init container help with reserving time for debugging the data available on the mounted volume. You simply `kubectl exec` into the container and inspect the contents.
