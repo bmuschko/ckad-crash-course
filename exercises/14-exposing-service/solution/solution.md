@@ -67,7 +67,7 @@ spec:
   type: NodePort
 ...
 
-kubectl get services
+$ kubectl get services
 NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 myapp        NodePort    10.108.88.208   <none>        80:30441/TCP   3m
 ```

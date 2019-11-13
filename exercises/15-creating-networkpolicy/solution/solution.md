@@ -19,7 +19,7 @@ database   1/1     Running   0          22s
 frontend   1/1     Running   0          22s
 ```
 
-The following definition ensure that all rules are fulfilled.
+The following definition ensures that all rules are fulfilled.
 
 ```yaml
 apiVersion: networking.k8s.io/v1

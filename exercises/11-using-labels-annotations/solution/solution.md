@@ -13,6 +13,10 @@ pod/database created
 
 Edit the existing Pods with the `edit` command and add the annotations as follows:
 
+```shell
+$ kubectl edit pod frontend
+```
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -22,6 +26,10 @@ metadata:
     contact: John Doe
   name: frontend
 ...
+```
+
+```shell
+$ kubectl edit pod backend
 ```
 
 ```yaml
@@ -58,7 +66,7 @@ You can add and remove labels with the `label` command. The selection now doesn'
 ```shell
 $ kubectl label pods backend env-
 pod/backend labeled
-$ kubectl get pods -l 'team in (shiny, legacy)',env==prod --show-labels
+$ kubectl get pods -l 'team in (shiny, legacy)',env=prod --show-labels
 NAME       READY   STATUS    RESTARTS   AGE   LABELS
 frontend   1/1     Running   0          23m   env=prod,team=shiny
 ```

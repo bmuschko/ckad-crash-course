@@ -18,7 +18,7 @@ requests.cpu     0     2
 requests.memory  0     500m
 ```
 
-Next, create the YAML file named `pod.yaml` with more requested memory than available in the quota.
+Next, create the YAML file named `pod.yaml` with more requested memory than available in the quota. You can start by running the command `k run mypod --image=nginx --restart=Never -o yaml --dry-run > pod.yaml` and then edit the produced YAML file. Remember to _replace_ the `resources` attribute that has been created automatically.
 
 ```yaml
 apiVersion: v1
