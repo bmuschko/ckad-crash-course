@@ -17,7 +17,7 @@ metadata:
     tier: backend
   name: deploy
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: v1
