@@ -1,4 +1,4 @@
-# Exercise 13
+# Exercise 14
 
 In this exercise, you will a Deployment and expose a container port for its Pods. You will demonstrate the differences between the service types ClusterIP and NodePort.
 
