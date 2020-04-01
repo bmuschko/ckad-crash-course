@@ -49,6 +49,7 @@ $ kubectl exec hello -it -- /bin/sh
 # curl localhost:3000
 Hello World
 # exit
+```
 
 Rendering the logs of the Pod reveals additional log output.
 
