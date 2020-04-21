@@ -1,6 +1,6 @@
 # Exercise 14
 
-In this exercise, you will a Deployment and expose a container port for its Pods. You will demonstrate the differences between the service types ClusterIP and NodePort.
+In this exercise, you will create a Deployment and expose a container port for its Pods. You will demonstrate the differences between the service types ClusterIP and NodePort.
 
 ## Routing Traffic to Pods from Inside and Outside of a Cluster
 
