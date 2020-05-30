@@ -46,7 +46,7 @@ $ kubectl create -f pod.yaml
 You can find the environment variable by shelling into the container and running the `env` command.
 
 ```shell
-$ kubectl exec -it backend -- /bin/sh
+$ kubectl exec -it backend -- env
 # env
 DB_PASSWORD=passwd
 # exit
