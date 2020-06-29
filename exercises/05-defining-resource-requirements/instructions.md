@@ -4,7 +4,7 @@ In this exercise, you will create a ResourceQuota with specific CPU and memory l
 
 ## Defining a Pod’s Resource Requirements
 
-Create a resource quota named `apps` under the namespace `rq-demo` using the following YAML definition in the file `rq.yaml`.
+Create a resource quota named `app` under the namespace `rq-demo` using the following YAML definition in the file `rq.yaml`.
 
 ```yaml
 apiVersion: v1
