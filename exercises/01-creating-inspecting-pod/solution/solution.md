@@ -148,3 +148,9 @@ pod "mypod" deleted
 $ kubectl delete namespace ckad-prep --grace-period=0 --force 
 namespace "ckad-prep" deleted
 ```
+
+### 11. Reset config
+```shell
+$ k config set-context --current --namespace=default
+````
+
