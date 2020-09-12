@@ -16,5 +16,6 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 
 * [Blog post about my experiences](https://bmuschko.com/blog/ckad-prep/)
 * [CKAD exercises](https://github.com/dgkanatsios/CKAD-exercises)
+* [CKAD Practice Questions](https://dev.to/liptanbiswas/ckad-practice-questions-4mpn)
 * [Golden guide to Kubernetes application development](https://matthewpalmer.net/kubernetes-app-developer)
 * [KodeKloud CKAD course](https://kodekloud.com/p/kubernetes-certification-course)
