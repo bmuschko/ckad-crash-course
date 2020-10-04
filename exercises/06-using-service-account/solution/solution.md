@@ -22,7 +22,7 @@ secrets:
 Next, you can create a new Pod and assign the service account to it.
 
 ```shell
-$ kubectl run backend --image=nginx --restart=Never --serviceaccount=backend-team
+$ kubectl run backend --image=nginx --serviceaccount=backend-team
 ```
 
 You can print out the token from the volume source at `/var/run/secrets/kubernetes.io/serviceaccount`.

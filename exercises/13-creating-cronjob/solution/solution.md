@@ -3,8 +3,7 @@
 The `run` command is deprecated but it provides a good shortcut for creating a CronJob with a single command.
 
 ```shell
-$ kubectl run current-date --schedule="* * * * *" --restart=OnFailure --image=nginx -- /bin/sh -c 'echo "Current date: $(date)"'
-kubectl run --generator=cronjob/v1beta1 is DEPRECATED and will be removed in a future version. Use kubectl create instead.
+$ kubectl create cronjob current-date --schedule="* * * * *" --image=nginx -- /bin/sh -c 'echo "Current date: $(date)"'
 cronjob.batch/current-date created
 ```
 

@@ -3,7 +3,7 @@
 Create the intial YAML with the following command.
 
 ```shell
-$ kubectl run hello --image=bmuschko/nodejs-hello-world:1.0.0 --restart=Never --port=3000 -o yaml --dry-run > pod.yaml
+$ kubectl run hello --image=bmuschko/nodejs-hello-world:1.0.0 --port=3000 -o yaml --dry-run=client > pod.yaml
 ```
 
 Edit the YAML file and add the probes.

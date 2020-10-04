@@ -3,7 +3,7 @@
 Start by generating the basic skeleton of the Pod.
 
 ```shell
-$ kubectl run business-app --image=bmuschko/nodejs-read-config:1.0.0 --restart=Never --port=8080 -o yaml --dry-run > business-app.yaml
+$ kubectl run business-app --image=bmuschko/nodejs-read-config:1.0.0 --port=8080 -o yaml --dry-run=client > business-app.yaml
 ```
 
 You should end up with the following configuration:

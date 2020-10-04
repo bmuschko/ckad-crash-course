@@ -3,7 +3,7 @@
 Start by creating the Pod definition as YAML file.
 
 ```shell
-$ kubectl run secured --image=nginx --restart=Never -o yaml --dry-run > secured.yaml
+$ kubectl run secured --image=nginx -o yaml --dry-run=client > secured.yaml
 ```
 
 Edit the YAML file, add a volume and a volume mount. Add a security context with the relevant group ID.

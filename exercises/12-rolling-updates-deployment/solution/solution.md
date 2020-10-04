@@ -3,7 +3,7 @@
 Generate the YAML for a Deployment plus Pod for further editing.
 
 ```shell
-$ kubectl create deployment deploy --image=nginx --dry-run -o yaml > deploy.yaml
+$ kubectl create deployment deploy --image=nginx --dry-run=client -o yaml > deploy.yaml
 ```
 
 Edit the labels. The selector should match the labels of the Pods. Change the replicas from 1 to 3.
