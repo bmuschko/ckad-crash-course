@@ -5,7 +5,7 @@ First, create the service acccount and inspect it.
 ```shell
 $ kubectl create serviceaccount backend-team
 serviceaccount/backend-team created
-$ kubectl get serviceaccount backend-team -o yaml --export
+$ kubectl get serviceaccount backend-team -o yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
