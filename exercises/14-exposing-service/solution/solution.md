@@ -1,29 +1,39 @@
 # Solution
 
-Create a deployment with 2 replicas first. You should end up with one deployment and two Pods.
+Expose the service with the type `ClusterIP` on port 80.
 
 ```shell
-$ kubectl run nginx --image=nginx --port=80 --expose
-$ kubectl edit service nginx
-$ kubectl create -f myapp-deployment.yaml
-deployment.apps/myapp created
-$ kubectl get deployments,pods
-NAME                          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-deployment.extensions/myapp   2         2         2            2           59s
-
-NAME                         READY   STATUS    RESTARTS   AGE
-pod/myapp-7bc568bfdd-972wg   1/1     Running   0          59s
-pod/myapp-7bc568bfdd-l5nmz   1/1     Running   0          59s
-```
-
-Expose the service with the type `ClusterIP` and the target port 80.
-
-```shell
-$ kubectl expose deploy myapp --target-port=80
-service/myapp exposed
+$ kubectl create service clusterip myapp --tcp=80:80
+service/myapp created
 $ kubectl get services
 NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
 myapp        ClusterIP   10.108.88.208   <none>        80/TCP    15s
+```
+
+Create a deployment and a Pod using the Deployment using the `run` command.
+
+```shell
+$ kubectl run myapp --image=nginx --port=80 --expose
+$ kubectl get deployments,pods
+NAME                          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+deployment.extensions/myapp   1         1         1            1           59s
+
+NAME                         READY   STATUS    RESTARTS   AGE
+pod/myapp-7bc568bfdd-972wg   1/1     Running   0          59s
+```
+
+Scale the Deployment to 2 replicas.
+
+```shell
+$ kubectl scale deployment myapp --replicas=2
+deployment.extensions/myapp scaled
+$ kubectl get deployments,pods
+NAME                          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+deployment.extensions/myapp   2         2         2            2           69s
+
+NAME                         READY   STATUS    RESTARTS   AGE
+pod/myapp-7bc568bfdd-972wg   1/1     Running   0          69s
+pod/myapp-7bc568bfdd-l5nmz   1/1     Running   0          69s
 ```
 
 Determine the cluster IP and use it for the `wget` command.
