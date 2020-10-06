@@ -64,7 +64,7 @@ frontend   1/1     Running   0          20m   env=prod,team=shiny
 You can add and remove labels with the `label` command. The selection now doesn't match for the `backend` Pod anymore.
 
 ```shell
-$ kubectl label pods backend env-
+$ kubectl label pod backend env-
 pod/backend labeled
 $ kubectl get pods -l 'team in (shiny, legacy)',env=prod --show-labels
 NAME       READY   STATUS    RESTARTS   AGE   LABELS
