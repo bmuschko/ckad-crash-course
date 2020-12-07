@@ -11,6 +11,6 @@ In this exercise, you will practice the creation of a new Pod in a namespace. On
 5. List the Pod and ensure that the container is running.
 6. Log into the container and run the `ls` command. Write down the output. Log out of the container.
 7. Retrieve the IP address of the Pod `mypod`.
-8. Run a temporary Pod using the image `busybox`, shell into it and run a `wget` command against the `nginx` Pod using port 80.
+8. Run a temporary Pod in ckad-prep namespace using the image `busybox`, shell into it and run a `wget` command against the `nginx` Pod using port 80.
 9. Render the logs of Pod `mypod`.
 10. Delete the Pod and the namespace.
