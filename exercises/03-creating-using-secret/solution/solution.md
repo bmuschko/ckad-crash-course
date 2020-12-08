@@ -8,7 +8,7 @@ secret/db-credentials created
 $ kubectl get secrets
 NAME              TYPE      DATA   AGE
 db-credentials    Opaque    1      26s
-$ kubectl run backend --image=nginx -o yaml --dry-run=client > pod.yaml
+$ kubectl run backend --image=nginx -o yaml --dry-run=client --restart=Never > pod.yaml
 ```
 
 Edit the YAML file and create an environment that reads the relevant key from the secret.

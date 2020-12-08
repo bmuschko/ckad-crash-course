@@ -3,7 +3,7 @@
 You can create the initial Pod setup with the following command.
 
 ```shell
-$ kubectl run adapter --image=busybox -o yaml --dry-run=client -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;' > adapter.yaml
+$ kubectl run adapter --image=busybox -o yaml --dry-run=client --restart=Never -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;' > adapter.yaml
 ```
 The final Pod YAML file should look something like this:
 

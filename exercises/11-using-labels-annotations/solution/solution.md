@@ -3,11 +3,11 @@
 You can assign labels upon Pod creation with the `--labels` option.
 
 ```shell
-$ kubectl run frontend --image=nginx --labels=env=prod,team=shiny
+$ kubectl run frontend --image=nginx --restart=Never --labels=env=prod,team=shiny
 pod/frontend created
-$ kubectl run backend --image=nginx --labels=env=prod,team=legacy,app=v1.2.4
+$ kubectl run backend --image=nginx --restart=Never --labels=env=prod,team=legacy,app=v1.2.4
 pod/backend created
-$ kubectl run database --image=nginx --labels=env=prod,team=storage
+$ kubectl run database --image=nginx --restart=Never --labels=env=prod,team=storage
 pod/database created
 ```
 

@@ -9,7 +9,7 @@ $ kubectl create namespace ckad-prep
 Next, create the Pod in the new namespace.
 
 ```shell
-$ kubectl run mypod --image=nginx:2.3.5 --port=80 --namespace=ckad-prep
+$ kubectl run mypod --image=nginx:2.3.5 --restart=Never --port=80 --namespace=ckad-prep
 pod/mypod created
 ```
 

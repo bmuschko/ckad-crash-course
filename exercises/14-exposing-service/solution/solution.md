@@ -10,10 +10,11 @@ NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
 myapp        ClusterIP   10.108.88.208   <none>        80/TCP    15s
 ```
 
-Create a deployment and a Pod using the Deployment using the `run` command.
+Create a Deployment and a Pod using the Deployment using the `run` command.
 
 ```shell
-$ kubectl run myapp --image=nginx --port=80 --expose
+$ kubectl create deployment myapp --image=nginx --port=80
+deployment.apps/myapp created
 $ kubectl get deployments,pods
 NAME                          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 deployment.extensions/myapp   1         1         1            1           59s
@@ -39,8 +40,8 @@ pod/myapp-7bc568bfdd-l5nmz   1/1     Running   0          69s
 Determine the cluster IP and use it for the `wget` command.
 
 ```shell
-$ kubectl run tmp --image=busybox --restart=Never -it --rm -- wget -O- 10.108.88.208:80
-Connecting to 10.108.88.208:80 (10.108.88.208:80)
+$ kubectl run tmp --image=busybox --restart=Never -it --rm -- wget -O- 10.109.232.76:80
+Connecting to 10.109.232.76:80 (10.109.232.76:80)
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,16 +82,24 @@ spec:
 
 $ kubectl get services
 NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-myapp        NodePort    10.108.88.208   <none>        80:30441/TCP   3m
+myapp        NodePort    10.109.232.76   <none>        80:30342/TCP   3m
 ```
 
-Run a `wget` or `curl` command against the service using port `30441`. On Docker for Windows/Mac you may have to use localhost or 127.0.0.1 (see [issue](https://github.com/docker/for-win/issues/1950)).
+Get the internal IP address of the node. That's 192.168.64.2 in this case.
 
 ```shell
-$ wget -O- localhost:30441
---2019-05-10 16:32:35--  http://localhost:30441/
+$ kubectl get nodes -o wide
+NAME       STATUS   ROLES    AGE    VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE               KERNEL-VERSION   CONTAINER-RUNTIME
+minikube   Ready    master   175d   v1.19.2   192.168.64.2   <none>        Buildroot 2019.02.10   4.19.107         docker://19.3.8
+```
+
+Run a `wget` or `curl` command against the service using port `30342`.
+
+```shell
+$ wget -O- 192.168.64.2:30342
+--2019-05-10 16:32:35--  http://192.168.64.2:30342/
 Resolving localhost (localhost)... ::1, 127.0.0.1
-Connecting to localhost (localhost)|::1|:30441... connected.
+Connecting to localhost (localhost)|::1|:30342... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 612 [text/html]
 Saving to: ‘STDOUT’
