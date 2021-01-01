@@ -41,7 +41,7 @@ spec:
   storageClassName: shared
 ```
 
-You will see that the Persisten Volume Claim has been created and has been bound to the Persisten Volume.
+You will see that the Persistent Volume Claim has been created and has been bound to the Persistent Volume.
 
 ```shell
 $ kubectl get pvc
