@@ -10,7 +10,7 @@ cronjob.batch/current-date created
 Watch the Jobs as they are executed.
 
 ```shell
-$ kubectl get cronjobs --watch
+$ kubectl get jobs --watch
 NAME                      COMPLETIONS   DURATION   AGE
 current-date-1557522540   1/1           3s         103s
 current-date-1557522600   1/1           4s         43s
