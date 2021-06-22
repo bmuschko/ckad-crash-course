@@ -133,3 +133,13 @@ Commercial support is available at
 
 2019-05-10 16:32:35 (24.3 MB/s) - written to stdout [612/612]
 ```
+
+## Optional
+
+> Can you expose the Pods as a service without a deployment?
+
+Yes, a Service does not need a Deployment to work but they can work in tandem. A Deployment manages Pods and their replication. A Service routes network requests to a set of Pods. Both primitives use label selection to connect with an associated set of Pods.
+
+> Under what condition would you use the service type `LoadBalancer`?
+
+The Kubernetes cluster needs to provide LoadBalancer capapabilities. That's usually the case in cloud environments.
