@@ -16,15 +16,15 @@ pod/mypod created
 You will see that the image cannot be pulled as it doesn't exist with this tag.
 
 ```shell
-$ kubectl get pod -n ckad-prep
+$ kubectl get pods -n ckad-prep
 NAME    READY   STATUS             RESTARTS   AGE
 mypod   0/1     ImagePullBackOff   0          1m
 ```
 
-The list of events can give you a deeper insight.
+The list of events of the Pod can give you a deeper insight.
 
 ```shell
-$ kubectl describe pod -n ckad-prep
+$ kubectl describe pod mypod -n ckad-prep
 ...
 Events:
   Type     Reason                 Age                 From                         Message
@@ -47,7 +47,7 @@ $ kubectl edit pod mypod --namespace=ckad-prep
 After setting an image that does exist, the Pod should render the status `Running`.
 
 ```shell
-$ kubectl get pod -n ckad-prep
+$ kubectl get pods -n ckad-prep
 NAME    READY   STATUS    RESTARTS   AGE
 mypod   1/1     Running   0          14m
 ```
