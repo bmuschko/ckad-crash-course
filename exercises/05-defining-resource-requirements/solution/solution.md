@@ -15,7 +15,7 @@ Resource         Used  Hard
 --------         ----  ----
 pods             0     2
 requests.cpu     0     2
-requests.memory  0     500m
+requests.memory  0     500Mi
 ```
 
 Next, create the YAML file named `pod.yaml` with more requested memory than available in the quota. You can start by running the command `kubectl run mypod --image=nginx -o yaml --dry-run=client --restart=Never > pod.yaml` and then edit the produced YAML file. Remember to _replace_ the `resources` attribute that has been created automatically.
@@ -45,10 +45,10 @@ Create the Pod and observe the error message.
 
 ```shell
 $ kubectl create -f pod.yaml --namespace=rq-demo
-Error from server (Forbidden): error when creating "pod.yaml": pods "mypod" is forbidden: exceeded quota: app, requested: requests.memory=1G, used: requests.memory=0, limited: requests.memory=500m
+Error from server (Forbidden): error when creating "pod.yaml": pods "mypod" is forbidden: exceeded quota: app, requested: requests.memory=1G, used: requests.memory=0, limited: requests.memory=500Mi
 ```
 
-Lower the memory settings to less than `500m` (e.g. `200m`) and create the Pod.
+Lower the memory settings to less than `500Mi` (e.g. `524M`) and create the Pod.
 
 ```shell
 $ kubectl create -f pod.yaml --namespace=rq-demo
@@ -60,5 +60,5 @@ Resource         Used  Hard
 --------         ----  ----
 pods             1     2
 requests.cpu     400m  2
-requests.memory  200m  500m
+requests.memory  524M  500Mi
 ```

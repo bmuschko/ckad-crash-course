@@ -15,7 +15,7 @@ spec:
   hard:
     pods: "2"
     requests.cpu: "2"
-    requests.memory: 500m
+    requests.memory: 500Mi
 ```
 
 1. Create a new Pod that exceeds the limits of the resource quota requirements e.g. by defining 1G of memory. Write down the error message.
