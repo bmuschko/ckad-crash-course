@@ -17,6 +17,7 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * [Certified Kubernetes Application Developer (CKAD) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-application/9781492083726/)
 * [LinkedIn Learning: Certified Kubernetes Application Developer (CKAD) Cert Prep: Exam Tips](https://www.linkedin.com/learning/certified-kubernetes-application-developer-ckad-cert-prep-exam-tips)
 * [Blog Post About my Experiences](https://bmuschko.com/blog/ckad-prep/)
+* [Killer Shell](https://killer.sh/)
 * [Study4Exam CKAD Exam](https://www.study4exam.com/linux-foundation/info/ckad)
 * [CKAD Exercises by Dimitris-Ilias Gkanatsios](https://github.com/dgkanatsios/CKAD-exercises)
 * [Katacoda Practice Questions by Liptan Biswas](https://dev.to/liptanbiswas/ckad-practice-questions-4mpn)
