@@ -2,7 +2,7 @@
 
 The ability to use, troubleshoot and monitor Kubernetes as an application developer is in high demand. In response, the Cloud Native Computing Foundation (CNCF) developed the [Certified Kubernetes Application Developer (CKAD) certification](https://www.cncf.io/certification/ckad/) to establish a developer’s credibility and value in the job market to confidently work in a Kubernetes environment. The exam is different from the typical multi-choice format of other certifications. It’s completely performance-based and requires deep knowledge of the tasks at hand under immense time pressure. Are you ready to pass the test on the first go?
 
-This practical course is designed to walk you through all the topics covered in the exam to fully prepare to pass the certification exam. The trainer and [CKAD](https://www.youracclaim.com/badges/027f5e55-5e7d-4113-bd62-9414fb09c277), Benjamin Muschko, will also share his personal experience with preparing for all aspects of the exam.
+This practical course is designed to walk you through all the topics covered in the exam to fully prepare to pass the certification exam. The trainer, [CKA](https://www.credly.com/badges/9a599e63-6155-422e-b169-8eaaed5369ab) and [CKAD](https://www.credly.com/badges/98ba0895-b669-47d5-8206-50b7223940e3), Benjamin Muschko, will also share his personal experience with preparing for all aspects of the exam.
 
 ## Prerequisites
 
