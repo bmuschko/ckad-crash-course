@@ -24,9 +24,6 @@ Next, create the YAML file named `pod.yaml` with more requested memory than avai
 apiVersion: v1
 kind: Pod
 metadata:
-  creationTimestamp: null
-  labels:
-    run: mypod
   name: mypod
 spec:
   containers:
@@ -34,21 +31,19 @@ spec:
     name: mypod
     resources:
       requests:
-        memory: "1G"
-        cpu: "400m"
-  dnsPolicy: ClusterFirst
+        cpu: "0.5"
+        memory: "1Gi"
   restartPolicy: Never
-status: {}
 ```
 
 Create the Pod and observe the error message.
 
 ```shell
 $ kubectl create -f pod.yaml --namespace=rq-demo
-Error from server (Forbidden): error when creating "pod.yaml": pods "mypod" is forbidden: exceeded quota: app, requested: requests.memory=1G, used: requests.memory=0, limited: requests.memory=500Mi
+Error from server (Forbidden): error when creating "pod.yaml": pods "mypod" is forbidden: exceeded quota: app, requested: requests.memory=1Gi, used: requests.memory=0, limited: requests.memory=500Mi
 ```
 
-Lower the memory settings to less than `500Mi` (e.g. `524M`) and create the Pod.
+Lower the memory settings to less than `500Mi` (e.g. `255Mi`) and create the Pod.
 
 ```shell
 $ kubectl create -f pod.yaml --namespace=rq-demo
@@ -56,9 +51,9 @@ pod/mypod created
 $ kubectl describe quota --namespace=rq-demo
 Name:            app
 Namespace:       rq-demo
-Resource         Used  Hard
---------         ----  ----
-pods             1     2
-requests.cpu     400m  2
-requests.memory  524M  500Mi
+Resource         Used   Hard
+--------         ----   ----
+pods             1      2
+requests.cpu     500m   2
+requests.memory  255Mi  500Mi
 ```
