@@ -2,6 +2,8 @@
 
 In this exercise, you will create a CronJob and render its executions.
 
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a CronJob"](https://learning.oreilly.com/scenarios/6-10-ckad-jobs/9781098105297/).
+
 ## Creating a Scheduled Container Operation
 
 1. Create a CronJob named `current-date` that runs every minute and executes the shell command `echo "Current date: $(date)"`.

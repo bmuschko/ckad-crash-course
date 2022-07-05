@@ -2,6 +2,8 @@
 
 In this exercise, you will practice the creation of a new Pod in a namespace. Once created, you will inspect it, shell into it and run some operations inside of the container.
 
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating and interacting with a Pod"](https://learning.oreilly.com/scenarios/2-1-ckad-pods/9781098104818/).
+
 ## Creating a Pod and Inspecting it
 
 1. Create the namespace `ckad-prep`.

@@ -2,6 +2,8 @@
 
 In this exercise, you will initialize a web application by standing up environment-specific configuration through an init container.
 
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating an init container"](https://learning.oreilly.com/scenarios/4-1-ckad-multi-container/9781098104986/).
+
 ## Creating an Init Container
 
 Kubernetes runs an init container before the main container. In this scenario, the init container retrieves configuration files from a remote location and makes it available to the application running in the main container. The configuration files are shared through a volume mounted by both containers. The running application consumes the configuration files and can render its values.

@@ -2,6 +2,8 @@
 
 In this exercise, you will create a Pod running a NodeJS application. The Pod will define readiness and liveness probes with different parameters.
 
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a Pod with a readiness Probe of type HTTP GET request"](https://learning.oreilly.com/scenarios/5-1-ckad-probing/9781098105105/).
+
 ## Defining a Pod’s Readiness and Liveness Probe
 
 1. Create a new Pod named `hello` with the image `bmuschko/nodejs-hello-world:1.0.0` that exposes the port 3000. Provide the name `nodejs-port` for the container port.

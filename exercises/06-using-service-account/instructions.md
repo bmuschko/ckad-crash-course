@@ -2,6 +2,8 @@
 
 In this exercise, you will create a ServiceAccount and assign it to a Pod.
 
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating and assigning a ServiceAccount"](https://learning.oreilly.com/scenarios/3-7-ckad-security/9781098104962/).
+
 ## Using a ServiceAccount
 
 1. Create a new service account named `backend-team`.

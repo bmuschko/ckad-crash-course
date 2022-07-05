@@ -2,6 +2,8 @@
 
 In this exercise, you will first create a Secret from literal values. Next, you'll create a Pod and consume the Secret as environment variables. Finally, you'll print out its values from within the container.
 
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a Secret and consuming it as environment variables"](https://learning.oreilly.com/scenarios/3-1-ckad-configuration/9781098104894/).
+
 ## Configuring a Pod to Use a Secret
 
 1. Create a new Secret named `db-credentials` with the key/value pair `db-password=passwd`.

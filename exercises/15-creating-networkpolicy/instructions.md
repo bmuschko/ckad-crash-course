@@ -2,6 +2,8 @@
 
 In this exercise, you will set up a NetworkPolicy to restrict access to and from a Pod.
 
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a Network Policy"](https://learning.oreilly.com/scenarios/7-3-ckad-services/9781098105334/).
+
 ## Restricting Access to and from a Pod
 
 Let's assume we are working on an application stack that defines three different layers: a frontend, a backend and a database. Each of the layers runs in a Pod. You can find the definition in the YAML file `app-stack.yaml`. The application needs to run in the namespace `app-stack`.
