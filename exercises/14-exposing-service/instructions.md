@@ -2,7 +2,7 @@
 
 In this exercise, you will create a Deployment and expose a container port for its Pods. You will demonstrate the differences between the service types ClusterIP and NodePort.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenarios ["Creating a Service of type ClusterIP"](https://learning.oreilly.com/scenarios/7-1-ckad-services/9781098105310/) and [Creating a Service of type NodePort](https://learning.oreilly.com/scenarios/7-2-ckad-services/9781098105327/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenarios ["Creating a Service of type ClusterIP"](https://learning.oreilly.com/scenarios/7-1-ckad-services/9781098105310/) and ["Creating a Service of type NodePort"](https://learning.oreilly.com/scenarios/7-2-ckad-services/9781098105327/).
 
 ## Routing Traffic to Pods from Inside and Outside of a Cluster
 
