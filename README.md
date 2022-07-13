@@ -20,7 +20,7 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * ✍🏻 [Benjamin Muschko: Crushing the Certified Kubernetes Application Developer (CKAD) exam](https://bmuschko.com/blog/ckad-prep/)
 * 🎞️ [LinkedIn Learning: Certified Kubernetes Application Developer (CKAD) Cert Prep: Exam Tips](https://www.linkedin.com/learning/certified-kubernetes-application-developer-ckad-cert-prep-exam-tips)
 * 🎞️ [KodeKloud: Certified Kubernetes Application Developer (CKAD)](https://kodekloud.com/p/kubernetes-certification-course)
-* 🧪 [O'Reilly: CKAD Exam Practice Scenarios](https://learning.oreilly.com/playlists/8aa87dce-f9a9-4206-83af-c8c730faa430/)
+* 🧪 [O'Reilly: Katacoda CKAD Practice Labs](https://learning.oreilly.com/playlists/8aa87dce-f9a9-4206-83af-c8c730faa430/)
 * 🧪 [Killer Shell: CKAD Simulator](https://killer.sh/ckad)
 * 🧪 [Study4Exam: Certified Kubernetes Application Developer Exam](https://www.study4exam.com/linux-foundation/info/ckad)
 * 🧪 [Dimitris-Ilias Gkanatsios: CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
