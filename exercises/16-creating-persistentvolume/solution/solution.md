@@ -9,7 +9,7 @@ metadata:
   name: pv
 spec:
   capacity:
-    storage: 512m
+    storage: 512Mi
   accessModes:
     - ReadWriteMany
   storageClassName: shared
@@ -22,7 +22,7 @@ You will see that the Persistent Volume has been created but and is available to
 ```shell
 $ kubectl get pv
 NAME   CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
-pv     512m       RWX            Retain           Available           shared                  4s
+pv     512Mi      RWX            Retain           Available           shared                  4s
 ```
 
 Create a YAML file for the Persistent Volume Claim and create it with the command `kubectl create` command.
@@ -37,7 +37,7 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 256m
+      storage: 256Mi
   storageClassName: shared
 ```
 
@@ -46,11 +46,11 @@ You will see that the Persistent Volume Claim has been created and has been boun
 ```shell
 $ kubectl get pvc
 NAME   STATUS   VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-pvc    Bound    pv       512m       RWX            shared         2s
+pvc    Bound    pv       512Mi      RWX            shared         2s
 
 $ kubectl get pv
 NAME   CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM         STORAGECLASS   REASON   AGE
-pv     512m       RWX            Retain           Bound    default/pvc   shared                  1m
+pv     512Mi      RWX            Retain           Bound    default/pvc   shared                  1m
 ```
 
 Create a YAML file for the Pod and create it with the command `kubectl create` command.
