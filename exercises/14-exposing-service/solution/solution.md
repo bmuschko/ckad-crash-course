@@ -142,4 +142,4 @@ Yes, a Service does not need a Deployment to work but they can work in tandem. A
 
 > Under what condition would you use the service type `LoadBalancer`?
 
-The Kubernetes cluster needs to provide LoadBalancer capapabilities. That's usually the case in cloud environments.
+The Kubernetes cluster needs to provide LoadBalancer capabilities. That's usually the case in cloud environments.
