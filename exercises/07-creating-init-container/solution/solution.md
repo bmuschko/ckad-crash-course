@@ -2,7 +2,7 @@
 
 Start by generating the basic skeleton of the Pod.
 
-```shell
+```
 $ kubectl run business-app --image=bmuschko/nodejs-read-config:1.0.0 --port=8080 -o yaml --dry-run=client --restart=Never > business-app.yaml
 ```
 
@@ -122,7 +122,7 @@ status: {}
 
 Create the Pod from the YAML file. During the creation of the Pod you can follow the creation of individual containers.
 
-```shell
+```
 $ kubectl create -f business-app.yaml
 pod/business-app created
 
@@ -137,7 +137,7 @@ business-app   1/1     Running   0          37m
 
 Once the application is running, shell into the container. The mounted volume path contains the downloaded configuration file. The `curl` command renders the values from the configuration file.
 
-```shell
+```
 $ kubectl exec business-app -it -- /bin/sh
 # ls /usr/shared/app
 config.json

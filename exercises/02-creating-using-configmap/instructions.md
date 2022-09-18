@@ -4,7 +4,7 @@ In this exercise, you will first create a ConfigMap from predefined values in a 
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a ConfigMap and consuming it as environment variables"](https://learning.oreilly.com/labs/3-3-ckad-configuration/9781098104917/).
 
-1. Inspect the file named [config.txt](./config.txt) with the following environment variables as key/value pairs on each line.
+1. Inspect the file named [`config.txt`](./config.txt) with the following environment variables as key/value pairs on each line.
 
 - `DB_URL` equates to `localhost:3306`
 - `DB_USERNAME` equates to `postgres`

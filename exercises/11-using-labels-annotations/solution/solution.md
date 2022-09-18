@@ -2,7 +2,7 @@
 
 You can assign labels upon Pod creation with the `--labels` option.
 
-```shell
+```
 $ kubectl run frontend --image=nginx --restart=Never --labels=env=prod,team=shiny
 pod/frontend created
 $ kubectl run backend --image=nginx --restart=Never --labels=env=prod,team=legacy,app=v1.2.4
@@ -13,7 +13,7 @@ pod/database created
 
 Edit the existing Pods with the `edit` command and add the annotations as follows:
 
-```shell
+```
 $ kubectl edit pod frontend
 ```
 
@@ -28,7 +28,7 @@ metadata:
 ...
 ```
 
-```shell
+```
 $ kubectl edit pod backend
 ```
 
@@ -44,7 +44,7 @@ metadata:
 
 Render all Pods and their Pods including their assigned labels.
 
-```shell
+```
 $ kubectl get pods --show-labels
 NAME       READY   STATUS    RESTARTS   AGE   LABELS
 backend    1/1     Running   0          41s   app=v1.2.4,env=prod,team=legacy
@@ -54,7 +54,7 @@ frontend   1/1     Running   0          1m    env=prod,team=shiny
 
 You can combine the selector rules into one expression.
 
-```shell
+```
 $ kubectl get pods -l 'team in (shiny, legacy)',env=prod --show-labels
 NAME       READY   STATUS    RESTARTS   AGE   LABELS
 backend    1/1     Running   0          19m   app=v1.2.4,env=prod,team=legacy
@@ -63,7 +63,7 @@ frontend   1/1     Running   0          20m   env=prod,team=shiny
 
 You can add and remove labels with the `label` command. The selection now doesn't match for the `backend` Pod anymore.
 
-```shell
+```
 $ kubectl label pod backend env-
 pod/backend labeled
 $ kubectl get pods -l 'team in (shiny, legacy)',env=prod --show-labels
@@ -73,7 +73,7 @@ frontend   1/1     Running   0          23m   env=prod,team=shiny
 
 The `grep` command can help with rendering any YAML code around the identified search term.
 
-```shell
+```
 $ kubectl get pods -o yaml | grep -C 3 'annotations:'
 - apiVersion: v1
   kind: Pod

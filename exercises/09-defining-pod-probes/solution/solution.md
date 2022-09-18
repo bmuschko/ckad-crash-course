@@ -2,7 +2,7 @@
 
 Create the intial YAML with the following command.
 
-```shell
+```
 $ kubectl run hello --image=bmuschko/nodejs-hello-world:1.0.0 --port=3000 -o yaml --dry-run=client --restart=Never > pod.yaml
 ```
 
@@ -42,7 +42,7 @@ status: {}
 
 Create the Pod from the YAML file, shell into the Pod as soon as it is running and execute the `curl` command.
 
-```shell
+```
 $ kubectl create -f pod.yaml
 pod/hello created
 $ kubectl exec hello -it -- /bin/sh
@@ -53,7 +53,7 @@ Hello World
 
 Rendering the logs of the Pod reveals additional log output.
 
-```shell
+```
 $ kubectl logs pod/hello
 Magic happens on port 3000
 ```

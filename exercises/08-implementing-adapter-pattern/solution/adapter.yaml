@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: adapter
+spec:
+  volumes:
+    - name: config-volume
+      emptyDir: {}
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;'
+    image: busybox
+    name: app
+    volumeMounts:
+      - name: config-volume
+        mountPath: /var/logs
+  - image: busybox
+    name: transformer
+    args:
+    - /bin/sh
+    - -c
+    - 'sleep 20; while true; do while read LINE; do echo "$LINE" | cut -f2 -d"|" >> $(date +%Y-%m-%d-%H-%M-%S)-transformed.txt; done < /var/logs/diskspace.txt; sleep 20; done;'
+    volumeMounts:
+      - name: config-volume
+        mountPath: /var/logs
+  restartPolicy: Never

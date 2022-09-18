@@ -4,7 +4,7 @@ In this exercise, you will set up a NetworkPolicy to restrict access to and from
 
 > **_NOTE:_** Without a network policy controller, network policies won't have any effect. You need to configure a network overlay solution that provides this controller. You'll have to go through some extra steps to install and enable the network provider Cilium. Without adhering to the proper prerequisites, network policies won't have any effect. You can find installation guidance in the file [cilium-setup.md](./cilium-setup.md). If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a Network Policy"](https://learning.oreilly.com/labs/7-3-ckad-services/9781098105334/).
 
-Let's assume we are working on an application stack that defines three different layers: a frontend, a backend and a database. Each of the layers runs in a Pod. You can find the definition in the YAML file `app-stack.yaml`. The application needs to run in the namespace `app-stack`.
+Let's assume we are working on an application stack that defines three different layers: a frontend, a backend and a database. Each of the layers runs in a Pod. You can find the definition in the YAML file [`app-stack.yaml`](./app-stack.yaml). The application needs to run in the namespace `app-stack`.
 
 ```yaml
 kind: Pod
@@ -19,9 +19,7 @@ spec:
   containers:
     - name: frontend
       image: nginx
-
 ---
-
 kind: Pod
 apiVersion: v1
 metadata:
@@ -34,9 +32,7 @@ spec:
   containers:
     - name: backend
       image: nginx
-
 ---
-
 kind: Pod
 apiVersion: v1
 metadata:

@@ -2,7 +2,7 @@
 
 It's easy to create the secret from the command line. Furthermore, execute the `run` command to generate the YAML file for the Pod.
 
-```shell
+```
 $ kubectl create secret generic db-credentials --from-literal=db-password=passwd
 secret/db-credentials created
 $ kubectl get secrets
@@ -39,13 +39,13 @@ status: {}
 
 Create the Pod by pointing the `create` command to the YAML file.
 
-```shell
+```
 $ kubectl create -f pod.yaml
 ```
 
 You can find the environment variable by shelling into the container and running the `env` command.
 
-```shell
+```
 $ kubectl exec -it backend -- /bin/sh
 # env
 DB_PASSWORD=passwd

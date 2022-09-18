@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: current-date
+spec:
+  jobTemplate:
+    metadata:
+      name: current-date
+    spec:
+      template:
+        spec:
+          containers:
+          - command:
+            - /bin/sh
+            - -c
+            - 'echo "Current date: $(date)"'
+            image: nginx
+            name: current-date
+  schedule: '* * * * *'

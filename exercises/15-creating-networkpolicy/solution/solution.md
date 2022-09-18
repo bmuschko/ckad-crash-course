@@ -2,7 +2,7 @@
 
 Create the namespace 
 
-```shell
+```
 $ kubectl create namespace app-stack
 namespace/app-stack created
 
@@ -48,7 +48,7 @@ spec:
 
 Create the network policy.
 
-```shell
+```
 $ vim app-stack-network-policy.yaml
 $ kubectl create -f app-stack-network-policy.yaml
 $ kubectl get networkpolicy --namespace app-stack

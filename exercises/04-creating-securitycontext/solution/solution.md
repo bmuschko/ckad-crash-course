@@ -2,7 +2,7 @@
 
 Start by creating the Pod definition as YAML file.
 
-```shell
+```
 $ kubectl run secured --image=nginx -o yaml --dry-run=client --restart=Never > secured.yaml
 ```
 
@@ -36,7 +36,7 @@ status: {}
 
 Create the Pod and log into the container. Create the file in the directory of the volume mount. The group ID should be 3000 as defined by the security context.
 
-```shell
+```
 $ kubectl create -f secured.yaml
 pod/secured created
 $ kubectl exec -it secured -- sh

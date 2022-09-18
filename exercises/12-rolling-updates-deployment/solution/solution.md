@@ -2,7 +2,7 @@
 
 Generate the YAML for a Deployment plus Pod for further editing.
 
-```shell
+```
 $ kubectl create deployment deploy --image=nginx --dry-run=client -o yaml > deploy.yaml
 ```
 
@@ -37,7 +37,7 @@ status: {}
 
 Create the deployment by pointing it to the YAML file.
 
-```shell
+```
 $ kubectl create -f deploy.yaml
 deployment.apps/deploy created
 $ kubectl get deployments
@@ -47,7 +47,7 @@ deploy   3         3         3            1           4s
 
 Set the new image and check the revision history.
 
-```shell
+```
 $ kubectl set image deployment/deploy nginx=nginx:latest
 deployment.extensions/deploy image updated
 
@@ -74,14 +74,14 @@ Pod Template:
 
 Now scale the Deployment to 5 replicas.
 
-```shell
+```
 $ kubectl scale deployments deploy --replicas=5
 deployment.extensions/deploy scaled
 ```
 
 Roll back to revision 1. You will see the new revision. Inspecting the revision should show the image `nginx`.
 
-```shell
+```
 $ kubectl rollout undo deployment/deploy --to-revision=1
 deployment.extensions/deploy
 
