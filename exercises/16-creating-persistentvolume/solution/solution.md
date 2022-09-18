@@ -1,10 +1,10 @@
 # Solution
 
-Create a YAML file for the Persistent Volume and create it with the command `kubectl create` command.
+Create a manifest for the PersistentVolume and store it in the file `pv.yaml`.
 
 ```yaml
-apiVersion: v1
 kind: PersistentVolume
+apiVersion: v1
 metadata:
   name: pv
 spec:
@@ -12,20 +12,21 @@ spec:
     storage: 512Mi
   accessModes:
     - ReadWriteMany
-  storageClassName: shared
   hostPath:
     path: /data/config
 ```
 
-You will see that the Persistent Volume has been created but and is available to be claimed.
+Create the PersistentVolume with the following command.
 
-```shell
+```
+$ kubectl create -f pv.yaml
+persistentvolume/pv created
 $ kubectl get pv
 NAME   CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
-pv     512Mi      RWX            Retain           Available           shared                  4s
+pv     512Mi      RWX            Retain           Available                                   12s
 ```
 
-Create a YAML file for the Persistent Volume Claim and create it with the command `kubectl create` command.
+Create a manifest for the PersistentVolumeClaim and store it in the file `pvc.yaml`.
 
 ```yaml
 kind: PersistentVolumeClaim
@@ -35,64 +36,57 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
+  storageClassName: ""
   resources:
     requests:
       storage: 256Mi
-  storageClassName: shared
 ```
 
-You will see that the Persistent Volume Claim has been created and has been bound to the Persistent Volume.
+Create the PersistentVolumeClaim with the following command. You will see that the PersistentVolumeClaim has a status of "Bound".
 
-```shell
+```
+$ kubectl create -f pvc.yaml
+persistentvolumeclaim/pvc created
 $ kubectl get pvc
 NAME   STATUS   VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-pvc    Bound    pv       512Mi      RWX            shared         2s
-
-$ kubectl get pv
-NAME   CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM         STORAGECLASS   REASON   AGE
-pv     512Mi      RWX            Retain           Bound    default/pvc   shared                  1m
+pvc    Bound    pv       512Mi      RWX                           2s
 ```
 
-Create a YAML file for the Pod and create it with the command `kubectl create` command.
+Create a manifest for the Pod and store it in the file `pod.yaml`.
 
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  creationTimestamp: null
-  labels:
-    run: app
   name: app
 spec:
   containers:
   - image: nginx
     name: app
     volumeMounts:
-      - mountPath: "/data/app/config"
-        name: configpvc
-    resources: {}
+    - mountPath: "/data/app/config"
+      name: configpvc
   volumes:
-    - name: configpvc
-      persistentVolumeClaim:
-        claimName: pvc
-  dnsPolicy: ClusterFirst
+  - name: configpvc
+    persistentVolumeClaim:
+      claimName: pvc
   restartPolicy: Never
-status: {}
 ```
 
-You can check the events of a Pod with the `kubectl describe` command. You should see an entry that indicates the successful mount.
+```
+$ kubectl create -f pod.yaml
+pod/app created
+```
 
-```shell
-$ kubectl describe pod app
-...
-Events:
-  Type    Reason                 Age   From                         Message
-  ----    ------                 ----  ----                         -------
-  Normal  Scheduled              16s   default-scheduler            Successfully assigned app to docker-for-desktop
-  Normal  SuccessfulMountVolume  16s   kubelet, docker-for-desktop  MountVolume.SetUp succeeded for volume "pv"
-  Normal  SuccessfulMountVolume  16s   kubelet, docker-for-desktop  MountVolume.SetUp succeeded for volume "default-token-fsmmp"
-  Normal  Pulling                15s   kubelet, docker-for-desktop  pulling image "nginx"
-  Normal  Pulled                 14s   kubelet, docker-for-desktop  Successfully pulled image "nginx"
-  Normal  Created                14s   kubelet, docker-for-desktop  Created container
-  Normal  Started                13s   kubelet, docker-for-desktop  Started container
+Shell into the Pod and create a file in the mounted directory.
+
+```
+$ kubectl exec app -it -- /bin/sh
+# cd /data/app/config
+# ls -l
+total 0
+# touch test.txt
+# ls -l
+total 0
+-rw-r--r-- 1 root root 0 Dec 30 17:24 test.txt
 ```
