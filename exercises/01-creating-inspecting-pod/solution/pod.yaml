@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  namespace: ckad-prep
+spec:
+  containers:
+  - image: nginx:1.15.12
+    name: mypod
+    ports:
+    - containerPort: 80
+  restartPolicy: Never
