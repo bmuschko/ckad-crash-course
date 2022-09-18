@@ -2,20 +2,20 @@
 
 First, create the namespace.
 
-```shell
+```
 $ kubectl create namespace ckad-prep
 ```
 
 Next, create the Pod in the new namespace.
 
-```shell
+```
 $ kubectl run mypod --image=nginx:2.3.5 --restart=Never --port=80 --namespace=ckad-prep
 pod/mypod created
 ```
 
 You will see that the image cannot be pulled as it doesn't exist with this tag.
 
-```shell
+```
 $ kubectl get pods -n ckad-prep
 NAME    READY   STATUS             RESTARTS   AGE
 mypod   0/1     ImagePullBackOff   0          1m
@@ -23,7 +23,7 @@ mypod   0/1     ImagePullBackOff   0          1m
 
 The list of events of the Pod can give you a deeper insight.
 
-```shell
+```
 $ kubectl describe pod mypod -n ckad-prep
 ...
 Events:
@@ -40,13 +40,13 @@ Events:
 
 Go ahead and edit the existing Pod. Alternatively, you could also just use the `kubectl set image pod mypod mypod=nginx --namespace=ckad-prep` command.
 
-```shell
+```
 $ kubectl edit pod mypod --namespace=ckad-prep
 ```
 
 After setting an image that does exist, the Pod should render the status `Running`.
 
-```shell
+```
 $ kubectl get pods -n ckad-prep
 NAME    READY   STATUS    RESTARTS   AGE
 mypod   1/1     Running   0          14m
@@ -54,7 +54,7 @@ mypod   1/1     Running   0          14m
 
 You can shell into the container and run the `ls` command.
 
-```shell
+```
 $ kubectl exec mypod -it --namespace=ckad-prep  -- /bin/sh
 # ls
 bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv  sys  tmp  usr  var
@@ -63,7 +63,7 @@ bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv 
 
 Retrieve the IP address of the Pod with the `-o wide` command line option.
 
-```shell
+```
 $ kubectl get pods -o wide -n ckad-prep
 NAME    READY   STATUS    RESTARTS   AGE   IP               NODE
 mypod   1/1     Running   0          12m   192.168.60.149   docker-for-desktop
@@ -71,7 +71,7 @@ mypod   1/1     Running   0          12m   192.168.60.149   docker-for-desktop
 
 Remember to use the `--rm` to create a temporary Pod.
 
-```shell
+```
 $ kubectl run busybox --image=busybox --rm -it --restart=Never -n ckad-prep -- /bin/sh
 If you don't see a command prompt, try pressing enter.
 # wget -O- 192.168.60.149:80
@@ -107,14 +107,14 @@ Commercial support is available at
 
 The logs of the Pod should show a single line indicating our request.
 
-```shell
+```
 $ kubectl logs mypod -n ckad-prep
 192.168.60.162 - - [17/May/2019:13:35:59 +0000] "GET / HTTP/1.1" 200 612 "-" "Wget" "-"
 ```
 
 Delete the Pod and namespace after you are done.
 
-```shell
+```
 $ kubectl delete pod mypod --namespace=ckad-prep
 pod "mypod" deleted
 $ kubectl delete namespace ckad-prep
