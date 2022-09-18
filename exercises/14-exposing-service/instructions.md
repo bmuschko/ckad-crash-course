@@ -4,8 +4,6 @@ In this exercise, you will create a Deployment and expose a container port for i
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda labs ["Creating a Service of type ClusterIP"](https://learning.oreilly.com/labs/7-1-ckad-services/9781098105310/) and ["Creating a Service of type NodePort"](https://learning.oreilly.com/labs/7-2-ckad-services/9781098105327/).
 
-## Routing Traffic to Pods from Inside and Outside of a Cluster
-
 1. Create a Service named `myapp` of type `ClusterIP` that exposes port 80 and maps to the target port 80.
 2. Create a Deployment named `myapp` that creates 1 replica running the image `nginx`. Expose the container port 80.
 3. Scale the Deployment to 2 replicas.

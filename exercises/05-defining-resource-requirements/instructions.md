@@ -4,8 +4,6 @@ In this exercise, you will create a ResourceQuota with specific CPU and memory l
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a resource quota for a number of Secrets"](https://learning.oreilly.com/labs/3-6-ckad-security/9781098104955/).
 
-## Defining a Pod’s Resource Requirements
-
 Create a resource quota named `app` under the namespace `rq-demo` using the following YAML definition in the file `rq.yaml`.
 
 ```yaml

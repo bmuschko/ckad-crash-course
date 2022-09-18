@@ -1,10 +1,8 @@
 # Exercise 11
 
-In this exercise, you will exercise the use of labels and annotations for a set of Pods.
+In this exercise, you will exercise assigning labels and annotations to a set of Pods. Moreover, you will use `kubectl` to query for Pods based on different requirements.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda labs ["Assigning labels to Pods imperatively"](https://learning.oreilly.com/labs/6-1-ckad-labels/9781098105181/) and ["Assigning annotations to Pods imperatively"](https://learning.oreilly.com/labs/6-3-ckad-annotations/9781098105204/).
-
-## Defining and Querying Labels and Annotations
 
 1. Create three different Pods with the names `frontend`, `backend` and `database` that use the image `nginx`.
 2. Declare labels for those Pods as follows:

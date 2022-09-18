@@ -4,15 +4,12 @@ In this exercise, you will training your debugging skills by inspecting and fixi
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Troubleshooting a Pod"](https://learning.oreilly.com/labs/5-4-ckad-troubleshooting/9781098105150/).
 
-## Fixing a Misconfigured Pod
-
 1. Create a new Pod with the following YAML.
 
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  creationTimestamp: null
   labels:
     run: failing-pod
   name: failing-pod
@@ -25,10 +22,7 @@ spec:
       5; done;
     image: busybox
     name: failing-pod
-    resources: {}
-  dnsPolicy: ClusterFirst
   restartPolicy: Never
-status: {}
 ```
 
 2. Check the Pod's status. Do you see any issue?

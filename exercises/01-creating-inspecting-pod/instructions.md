@@ -4,8 +4,6 @@ In this exercise, you will practice the creation of a new Pod in a namespace. On
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating and interacting with a Pod"](https://learning.oreilly.com/labs/2-1-ckad-pods/9781098104818/).
 
-## Creating a Pod and Inspecting it
-
 1. Create the namespace `ckad-prep`.
 2. In the namespace `ckad-prep`, create a new Pod named `mypod` with the image `nginx:2.3.5`. Expose the port 80.
 3. Identify the issue with creating the container. Write down the root cause of issue in a file named `pod-error.txt`.
