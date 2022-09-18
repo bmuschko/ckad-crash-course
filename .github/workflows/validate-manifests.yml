@@ -1,0 +1,17 @@
+name: Validate Manifests
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Validate Manifests
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Set up Kubeval
+        run: |
+            wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+            tar xf kubeval-linux-amd64.tar.gz
+            sudo cp kubeval /usr/local/bin
+      - name: Validate Against Kubernetes Schema
+        run: kubeval -v 1.24.4 -s https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master -d . -i .github/workflows
