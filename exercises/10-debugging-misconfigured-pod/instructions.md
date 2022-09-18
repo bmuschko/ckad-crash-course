@@ -2,7 +2,7 @@
 
 In this exercise, you will training your debugging skills by inspecting and fixing a misconfigured Pod.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Troubleshooting a Pod"](https://learning.oreilly.com/scenarios/5-4-ckad-troubleshooting/9781098105150/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Troubleshooting a Pod"](https://learning.oreilly.com/labs/5-4-ckad-troubleshooting/9781098105150/).
 
 ## Fixing a Misconfigured Pod
 

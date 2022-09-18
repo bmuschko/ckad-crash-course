@@ -2,7 +2,7 @@
 
 In this exercise, you will create a ResourceQuota with specific CPU and memory limits for a new namespace. Pods created in the namespace will have to adhere to those limits.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a resource quota for a number of Secrets"](https://learning.oreilly.com/scenarios/3-6-ckad-security/9781098104955/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a resource quota for a number of Secrets"](https://learning.oreilly.com/labs/3-6-ckad-security/9781098104955/).
 
 ## Defining a Pod’s Resource Requirements
 

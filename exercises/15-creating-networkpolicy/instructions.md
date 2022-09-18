@@ -2,7 +2,7 @@
 
 In this exercise, you will set up a NetworkPolicy to restrict access to and from a Pod.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a Network Policy"](https://learning.oreilly.com/scenarios/7-3-ckad-services/9781098105334/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a Network Policy"](https://learning.oreilly.com/labs/7-3-ckad-services/9781098105334/).
 
 ## Restricting Access to and from a Pod
 
