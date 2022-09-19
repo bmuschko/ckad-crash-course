@@ -2,7 +2,7 @@
 
 In this exercise, you will implement the adapter pattern for a multi-container Pod.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a sidecar container"](https://learning.oreilly.com/labs/4-2-ckad-multi-container/9781098104993/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a sidecar container"](https://learning.oreilly.com/scenarios/ckad-multi-container-creating/9781098104993/).
 
 The adapter pattern helps with providing a simplified, homogenized view of an application running within a container. For example, we could stand up another container that unifies the log output of the application container. As a result, other monitoring tools can rely on a standardized view of the log output without having to transform it into an expected format.
 
