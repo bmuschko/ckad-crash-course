@@ -8,4 +8,4 @@ In this exercise, you will create a CronJob and render its executions.
 2. Watch the jobs as they are being scheduled.
 3. Identify one of the Pods that ran the CronJob and render the logs.
 4. Determine the number of successful executions the CronJob will keep in its history.
-5. Delete the Job.
+5. Delete the CronJob.
