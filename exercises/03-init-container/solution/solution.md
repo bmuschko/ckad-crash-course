@@ -127,8 +127,8 @@ $ kubectl create -f business-app.yaml
 pod/business-app created
 
 $ kubectl get pods
-NAME           READY   STATUS     RESTARTS   AGE
-business-app   0/1     Init:0/1   0          4s
+NAME           READY   STATUS            RESTARTS   AGE
+business-app   0/1     PodInitializing   0          4s
 
 $ kubectl get pods
 NAME           READY   STATUS    RESTARTS   AGE
