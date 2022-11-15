@@ -1,11 +1,5 @@
 # Solution
 
-Create the environment variables in the text file.
-
-```
-$ echo -e "DB_URL=localhost:3306\nDB_USERNAME=postgres" > config.txt
-```
-
 Create the ConfigMap and point to the text file upon creation.
 
 ```
