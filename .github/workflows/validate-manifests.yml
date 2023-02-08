@@ -14,4 +14,4 @@ jobs:
             tar xf kubeval-linux-amd64.tar.gz
             sudo cp kubeval /usr/local/bin
       - name: Validate Against Kubernetes Schema
-        run: kubeval -v 1.25.3 -s https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master -d . -i .github/workflows
+        run: kubeval -v 1.26.1 -s https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master -d . -i .github/workflows
