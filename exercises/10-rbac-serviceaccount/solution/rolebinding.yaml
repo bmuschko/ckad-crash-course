@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
-  name: serviceaccount-service-rolebinding
+  name: serviceaccount-service-clusterRolebinding
 subjects:
 - kind: ServiceAccount
   name: api-call
