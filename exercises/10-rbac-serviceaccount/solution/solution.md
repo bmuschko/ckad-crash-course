@@ -71,9 +71,9 @@ Reference the ClusterRole in a RoleBinding defined in the file `rolebinding.yaml
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
-  name: serviceaccount-service-rolebinding
+  name: serviceaccount-service-ClusterRoleBinding
 subjects:
 - kind: ServiceAccount
   name: api-call
@@ -88,7 +88,7 @@ Create both objects from the YAML manifests.
 
 ```
 $ kubectl apply -f clusterrole.yaml
-$ kubectl apply -f rolebinding.yaml
+$ kubectl apply -f clusterrolebinding.yaml
 ```
 
 The API call running inside of the container should now be authorized and be allowed to list the Service objects in the `default` namespace. As shown in the output below, the namespace currently hosts at least one Service object, the `kubernetes.default` Service.
