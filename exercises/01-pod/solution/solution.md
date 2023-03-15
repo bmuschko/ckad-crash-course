@@ -38,7 +38,7 @@ Events:
   Warning  Failed                 69s (x6 over 3m)    kubelet, docker-for-desktop  Error: ImagePullBackOff
 ```
 
-Go ahead and edit the existing Pod. Alternatively, you could also just use the `kubectl set image pod mypod mypod=nginx --namespace=ckad-prep` command.
+Go ahead and edit the existing Pod. Alternatively, you could also just use the `kubectl set image pod mypod mypod=nginx:<tag> --namespace=ckad-prep` command.
 
 ```
 $ kubectl edit pod mypod --namespace=ckad-prep
