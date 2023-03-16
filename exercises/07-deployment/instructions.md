@@ -4,7 +4,7 @@ In this exercise, you will create a Deployment with multiple replicas. After ins
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda labs ["Creating and Manually Scaling a Deployment"](https://learning.oreilly.com/scenarios/ckad-deployments-creating/9781098105235/) and ["Rolling Out a New Revision for a Deployment"](https://learning.oreilly.com/scenarios/ckad-deployments-rolling/9781098105242/).
 
-1. Create a Deployment named `deploy` with 3 replicas. The Pods should use the `nginx` image and the name `nginx`.
+1. Create a Deployment named `deploy` with 3 replicas. The Pods should use the `nginx` image and the name `nginx`. The Deployment uses the label `tier=backend`. The Pods should use the label `app=v1`.
 2. List the Deployment and ensure that the correct number of replicas is running.
 3. Update the image to `nginx:latest`.
 4. Verify that the change has been rolled out to all replicas.
