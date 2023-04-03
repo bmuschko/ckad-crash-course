@@ -9,6 +9,7 @@ spec:
     spec:
       template:
         spec:
+          restartPolicy: Never
           containers:
           - command:
             - /bin/sh
