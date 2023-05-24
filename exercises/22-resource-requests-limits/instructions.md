@@ -6,14 +6,14 @@ You are tasked with creating a Pod for running an application in container. Duri
 2. Add a Volume of type `emptyDir` and mount it the container path `/var/log`.
 3. For the container, specify the following minimum number of resources as follows:
 
-- CPU: 100m
-- Memory: 500Mi
-- Ephemeral storage: 1Gi
+    - CPU: 100m
+    - Memory: 500Mi
+    - Ephemeral storage: 1Gi
 
 4. For the container, specify the following maximum number of resources as follows:
 
-- Memory: 500Mi
-- Ephemeral storage: 2Gi
+    - Memory: 500Mi
+    - Ephemeral storage: 2Gi
 
 5. Create the Pod from the YAML manifest.
 6. Inspect the Pod details. Which node does the Pod run on?

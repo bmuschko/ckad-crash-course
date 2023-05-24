@@ -9,4 +9,3 @@ spec:
     name: mypod
     ports:
     - containerPort: 80
-  restartPolicy: Never
