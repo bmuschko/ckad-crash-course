@@ -1,0 +1,8 @@
+apiVersion: example.com/v1
+kind: Backup
+metadata:
+  name: nginx-backup
+spec:
+  cronExpression: "0 0 * * *"
+  podName: nginx
+  path: /usr/local/nginx
