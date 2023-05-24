@@ -37,6 +37,7 @@ spec:
 
 Create the object from the YAML manifest file.
 
+```
 $ kubectl apply -f backup-resource.yaml
 customresourcedefinition.apiextensions.k8s.io/backups.example.com created
 ```
