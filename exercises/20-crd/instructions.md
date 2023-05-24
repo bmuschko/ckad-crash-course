@@ -4,19 +4,19 @@ As an application developer, you may want to install Kubernetes functionality th
 
 1. Create a CRD resource named `backup.example.com` with the following specification:
 
-- Group: example.com
-- Version: v1
-- Kind: Backup
-- Singular: backup
-- Plural: backups
-- Properties of type `string`: `cronExpression`, `podName`, `path`
+    - Group: example.com
+    - Version: v1
+    - Kind: Backup
+    - Singular: backup
+    - Plural: backups
+    - Properties of type `string`: `cronExpression`, `podName`, `path`
 
 2. Retrieve the details for the `Backup` custom resource created in the previous step.
 
 3. Create a custom object named `nginx-backup` for the CRD. Provide the following property values:
 
-- `cronExpression`: `0 0 * * *`
-- `podName`: `nginx`
-- `path`: `/usr/local/nginx`
+    - `cronExpression`: `0 0 * * *`
+    - `podName`: `nginx`
+    - `path`: `/usr/local/nginx`
 
 4. Retrieve the details for the `nginx-backup` object created in the previous step.
