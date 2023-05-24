@@ -1,9 +1,7 @@
 # Exercise 1
-
 <details>
 <summary>
-
-##### Quick Reference
+<h4>Quick Reference</h4>
 </summary>
 
 * Namespace: N/A<br>
