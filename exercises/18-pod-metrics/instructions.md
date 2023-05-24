@@ -1,5 +1,15 @@
 # Exercise 18
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `stress-test`<br>
+* Documentation: [Metrics Server](https://github.com/kubernetes-sigs/metrics-server)
+
+</p>
+</details>
+
 > **_NOTE:_** You will need to install the metrics server if you want to be able to inspect actual resource metrics. You can find [installation instructions](https://github.com/kubernetes-sigs/metrics-server#installation) on the project's GitHub page.
 
 1. Create the namespace `stress-test`.

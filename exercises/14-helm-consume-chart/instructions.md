@@ -1,5 +1,15 @@
 # Exercise 14
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Helm](https://helm.sh/)
+
+</p>
+</details>
+
 In this exercise, you use Helm to install Kubernetes objects needed for the open source monitoring solution [Prometheus](https://prometheus.io/). The easiest way to install Prometheus on top of Kubernetes is with the help of the [prometheus-operator](https://prometheus-operator.dev/) Helm chart.
 
 > **_NOTE:_** You will need to have Helm installed on your machine. The Helm documentation page provides detailed, OS-specific [installation instructions](https://helm.sh/docs/intro/install/).

@@ -1,5 +1,15 @@
 # Exercise 4
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+
+</p>
+</details>
+
 In this exercise, you will create a CronJob and render its executions.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a CronJob"](https://learning.oreilly.com/scenarios/ckad-jobs-creating/9781098105297/).

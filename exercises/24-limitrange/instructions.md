@@ -1,5 +1,15 @@
 # Exercise 24
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `d92`<br>
+* Documentation: [Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/), [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+
+</p>
+</details>
+
 A LimitRange can restrict resource consumption for Pods in a namespace, and assign default computing resource if no resource requirements have been defined. You will practice the effects of a LimitRange on the creation of a Pod in different scenarios.
 
 1. Inspect the YAML manifest definition in the file [`setup.yaml`](./setup.yaml).

@@ -1,5 +1,15 @@
 # Exercise 5
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `h92`<br>
+* Documentation: [Ephemeral Volumes](https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/)
+
+</p>
+</details>
+
 In this exercise, you will create a Pod that runs the web server [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/). Nginx requires certains directory paths to be writable. We'll mount ephemeral Volumes to make those paths available to container.
 
 1. Create a Pod named `nginx` in the namespace `h92`. Its container should run the container image `nginx:1.21.6`.

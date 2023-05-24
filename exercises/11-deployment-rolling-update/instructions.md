@@ -1,5 +1,15 @@
 # Exercise 11
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), [ReplicaSets](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/), [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
+
+</p>
+</details>
+
 In this exercise, you will create a Deployment with multiple replicas. After inspecting the Deployment, you will update its Pod template. Furthermore, you will use the rollout history to roll back to a previous revision.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda labs ["Creating and Manually Scaling a Deployment"](https://learning.oreilly.com/scenarios/ckad-deployments-creating/9781098105235/) and ["Rolling Out a New Revision for a Deployment"](https://learning.oreilly.com/scenarios/ckad-deployments-rolling/9781098105242/).

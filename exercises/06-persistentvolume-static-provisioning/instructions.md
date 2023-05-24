@@ -1,5 +1,15 @@
 # Exercise 6
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+
+</p>
+</details>
+
 In this exercise, you will create a PersistentVolume, connect it to a PersistentVolumeClaim and mount the claim to a specific path of a Pod.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a Pod with Volume of type PersistentVolume with static binding"](https://learning.oreilly.com/scenarios/ckad-volumes-creating/9781098105365/).

@@ -1,5 +1,15 @@
 # Exercise 27
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+
+</p>
+</details>
+
 In this exercise, you will create a Pod that defines a security context with different options.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Defining a security context"](https://learning.oreilly.com/scenarios/ckad-security-defining/9781098104948/).

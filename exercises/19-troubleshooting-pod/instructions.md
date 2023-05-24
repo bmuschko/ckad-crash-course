@@ -1,5 +1,15 @@
 # Exercise 19
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Debug Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/)
+
+</p>
+</details>
+
 In this exercise, you will practice your troubleshooting skills by inspecting a misconfigured Pod.
 
 1. Create a new Pod from the YAML manifest in the file [`pod.yaml`](./pod.yaml).

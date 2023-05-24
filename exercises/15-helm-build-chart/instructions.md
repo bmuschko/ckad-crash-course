@@ -1,5 +1,15 @@
 # Exercise 15
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Helm](https://helm.sh/)
+
+</p>
+</details>
+
 In this exercise, you will practice the implementation, packaging, and installation of a configurable custom Helm chart.
 
 1. Create a new chart file named `Chart.yaml`. Define all mandatory attributes including the chart's API version, the name, and the version. Add the following key-value pairs: `API version: 1.0.0`, `Name: web-app`, and `Version: 2.5.4`.

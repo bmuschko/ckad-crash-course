@@ -1,5 +1,15 @@
 # Exercise 23
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `rq-demo`<br>
+* Documentation: [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
+
+</p>
+</details>
+
 In this exercise, you will create a ResourceQuota with specific CPU and memory limits for a new namespace. Pods created in the namespace will have to adhere to those limits.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a resource quota for a number of Secrets"](https://learning.oreilly.com/scenarios/ckad-security-creating/9781098104955/).

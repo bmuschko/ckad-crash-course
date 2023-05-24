@@ -1,5 +1,15 @@
 # Exercise 7
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/), [Pods](https://kubernetes.io/docs/concepts/workloads/pods/), [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+
+</p>
+</details>
+
 Kubernetes runs an init container before the main container. In this lab, the init container retrieves configuration files from a remote location and makes it available to the application running in the main container. The configuration files are shared through a volume mounted by both containers. The running application consumes the configuration files and can render its values.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating an init container"](https://learning.oreilly.com/scenarios/ckad-multi-container-creating/9781098104986/).

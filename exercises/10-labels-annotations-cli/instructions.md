@@ -1,5 +1,15 @@
 # Exercise 10
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/), [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+</p>
+</details>
+
 In this exercise, you will exercise assigning labels and annotations to a set of Pods. Moreover, you will use `kubectl` to query for Pods based on different requirements.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda labs ["Assigning labels to Pods imperatively"](https://learning.oreilly.com/scenarios/ckad-labels-assigning/9781098105181/) and ["Assigning annotations to Pods imperatively"](https://learning.oreilly.com/scenarios/ckad-annotations-assigning/9781098105204/).

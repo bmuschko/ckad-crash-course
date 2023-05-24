@@ -1,5 +1,15 @@
 # Exercise 17
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+
+</p>
+</details>
+
 In this exercise, you will create a Pod running a NodeJS application. The Pod will define readiness and liveness probes with different parameters.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a Pod with a readiness Probe of type HTTP GET request"](https://learning.oreilly.com/scenarios/ckad-probing-creating/9781098105105/).

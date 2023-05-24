@@ -1,5 +1,15 @@
 # Exercise 28
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Services](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+</p>
+</details>
+
 In this exercise, you will create a Deployment and expose a container port for its Pods. You will demonstrate the differences between the service types ClusterIP and NodePort.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda labs ["Creating a Service of type ClusterIP"](https://learning.oreilly.com/scenarios/ckad-services-creating/9781098105310/) and ["Creating a Service of type NodePort"](https://learning.oreilly.com/scenarios/ckad-services-creating/9781098105327/). If you are using minikube, the network is limited if using the Docker driver on Darwin, Windows, or WSL, and the Node IP is not reachable directly. Refer to the [documentation](https://minikube.sigs.k8s.io/docs/handbook/accessing/) to gain access to the minikube IP.

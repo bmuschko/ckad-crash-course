@@ -1,5 +1,15 @@
 # Exercise 26
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `default`<br>
+* Documentation: [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
+
+</p>
+</details>
+
 In this exercise, you will first create a Secret from literal values. Next, you'll create a Pod and consume the Secret as environment variables. Finally, you'll print out its values from within the container.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a Secret and consuming it as environment variables"](https://learning.oreilly.com/scenarios/ckad-configuration-creating/9781098104894/).

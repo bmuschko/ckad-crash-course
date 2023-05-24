@@ -1,5 +1,15 @@
 # Exercise 9
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `ext-access`<br>
+* Documentation: [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
+
+</p>
+</details>
+
 In this example, you'll be asked to implement rate-limiting functionality for HTTP(S) calls to an external service. For example, the requirements for the rate limiter could say that an application can only make a maximum of five calls every 15 minutes. Instead of strongly coupling the rate-limiting logic to the application code, it will be provided by an ambassador container.
 
 The image `bmuschko/nodejs-business-app:1.0.0` represents a Node.js-based application that makes a call to localhost on port 8081. The ambassador container represented by the image `bmuschko/nodejs-ambassador:1.0.0` running on port 8081 will take on making the HTTP call to the external service while at the same time enforcing rate limiting.

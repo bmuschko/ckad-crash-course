@@ -1,5 +1,15 @@
 # Exercise 21
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `t23`<br>
+* Documentation: [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/), [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+
+</p>
+</details>
+
 In this exercise, you will define Role Based Access Control (RBAC) to grant permissions to a service account. The permissions should only apply to certain API resources and operations.
 
 1. Create a new namespace named `t23`.
