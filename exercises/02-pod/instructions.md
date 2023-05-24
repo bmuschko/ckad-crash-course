@@ -1,5 +1,15 @@
 # Exercise 2
 
+<details>
+<summary><b>Quick Reference</b></summary>
+<p>
+
+* Namespace: `ckad-prep`<br>
+* Documentation: [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
+
+</p>
+</details>
+
 In this exercise, you will practice the creation of a new Pod in a namespace. Once created, you will inspect it, shell into it and run some operations inside of the container.
 
 > **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating and interacting with a Pod"](https://learning.oreilly.com/scenarios/ckad-pods-creating/9781098104818/).
