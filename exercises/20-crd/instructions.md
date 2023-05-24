@@ -4,11 +4,11 @@ As an application developer, you may want to install Kubernetes functionality th
 
 1. Create a CRD resource named `backup.example.com` with the following specification:
 
-    - Group: example.com
-    - Version: v1
-    - Kind: Backup
-    - Singular: backup
-    - Plural: backups
+    - Group: `example.com`
+    - Version: `v1`
+    - Kind: `Backup`
+    - Singular: `backup`
+    - Plural: `backups`
     - Properties of type `string`: `cronExpression`, `podName`, `path`
 
 2. Retrieve the details for the `Backup` custom resource created in the previous step.
