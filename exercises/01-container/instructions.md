@@ -1,4 +1,5 @@
 # Exercise 1
+
 <details>
 <summary><b>Quick Reference</b></summary>
 <p>
