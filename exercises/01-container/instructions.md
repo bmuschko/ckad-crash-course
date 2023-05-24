@@ -1,7 +1,8 @@
 # Exercise 1
 
 <details>
-    <summary>Quick Reference</summary>
+
+<summary>Quick Reference</summary>
 
 * Namespace: N/A<br>
 * Documentation: [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
