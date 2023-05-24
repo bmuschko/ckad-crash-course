@@ -4,7 +4,7 @@ In this exercise, you will practice building a container image from an existing 
 
 <details open><summary>Quick Reference</summary>
 
-Namespace: N/A<br>
+Namespace: N/A
 Documentation: [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
 </details>
