@@ -3,7 +3,7 @@
 In this exercise, you will practice building a container image from an existing `Dockerfile`. Then you will run the container from the image, and interact with it. You can use a container runtime engine of your choice, e.g. [Docker Engine](https://docs.docker.com/engine/), [containerd](https://containerd.io/).
 
 <hr style="display:block"/>
-<b>Quick Reference</b><br>
+<b>Quick Reference</b><br><br>
 
 Namespace: N/A<br>
 Documentation: [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
