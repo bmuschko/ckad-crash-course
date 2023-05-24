@@ -6,6 +6,7 @@ In this exercise, you will practice building a container image from an existing 
 <br><br>
 Namespace: N/A<br>
 Documentation: [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
+
 </details>
 
 1. Inspect the [`Dockerfile`](./app/Dockerfile) in the `app` directory.
