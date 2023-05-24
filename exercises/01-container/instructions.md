@@ -1,6 +1,6 @@
 # Exercise 1
 <details>
-<summary>Quick Reference</summary>
+<summary><b>Quick Reference</b></summary>
 <p>
 
 * Namespace: N/A<br>
