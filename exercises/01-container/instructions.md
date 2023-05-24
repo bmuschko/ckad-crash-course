@@ -10,6 +10,7 @@ Namespace: N/A
 Documentation: [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
 <hr style="display:block"/>
+
 1. Inspect the [`Dockerfile`](./app/Dockerfile) in the `app` directory.
 2. Build the container image from the `Dockerfile` with the tag `nodejs-hello-world:1.0.0`.
 3. Run a container with the container image. Make the application available on port 80.
