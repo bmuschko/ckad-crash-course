@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-more-cpu-resource-requirements
+  namespace: d92
+spec:
+  containers:
+  - image: nginx:1.23.4-alpine
+    name: nginx
+    resources:
+      requests:
+        cpu: 400m
+      limits:
+        cpu: 1.5

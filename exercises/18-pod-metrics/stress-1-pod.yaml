@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stress-1
+  namespace: stress-test
+spec:
+  containers:
+  - image: polinux/stress:1.0.4
+    name: consumer
+    args: [/bin/sh, -c, 'stress --vm 1 --vm-bytes $(shuf -i 20-200 -n 1)M --vm-hang 1']
+    resources:
+      limits:
+        memory: "250Mi"
+      requests:
+        memory: "250Mi"

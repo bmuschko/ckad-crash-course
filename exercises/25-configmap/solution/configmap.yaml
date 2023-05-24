@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  application.yaml: |-
+    dev:
+      url: http://dev.bar.com
+      name: Developer Setup
+    prod:
+      url: http://foo.bar.com
+      name: My Cool App

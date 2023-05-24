@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: app
+  template:
+    metadata:
+      labels:
+        run: app
+    spec:
+      containers:
+      - image: nginx:1.23.4
+        name: nginx
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: data-config

@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: y72
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+  namespace: y72
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - image: bmuschko/nodejs-hello-world:1.0.0
+        name: web-app
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-app
+  namespace: y72
+spec:
+  type: ClusterIP
+  selector:
+    run: myapp
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 3001

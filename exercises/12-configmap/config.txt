@@ -1,2 +1,0 @@
-DB_URL=localhost:3306
-DB_USERNAME=postgres

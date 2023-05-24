@@ -1,0 +1,9 @@
+# Exercise 5
+
+In this exercise, you will create a Pod that runs the web server [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/). Nginx requires certains directory paths to be writable. We'll mount ephemeral Volumes to make those paths available to container.
+
+1. Create a Pod named `nginx` in the namespace `h92`. Its container should run the container image `nginx:1.21.6`.
+2. Define a Volume of type `emptyDir` named `nginx-run` which mounts the path `/var/run` to the container.
+3. Define a Volume of type `emptyDir` named `nginx-cache` which mounts the path `/var/cache/nginx` to the container.
+4. Define a Volume of type `emptyDir` named `nginx-data` which mounts the path `/usr/local/nginx` to the container.
+5. (Optional) Say you would want to ensure the nginx can only write to those Volume mount paths but not the container's temporary file system. How do you prevent this from being allowed?
