@@ -27,7 +27,7 @@ spec:
 Create the deployment by pointing it to the YAML file. Check on the Deployment status.
 
 ```
-$ kubectl create -f nginx-deployment.yaml
+$ kubectl apply -f nginx-deployment.yaml
 deployment.apps/nginx created
 
 $ kubectl get deployment nginx

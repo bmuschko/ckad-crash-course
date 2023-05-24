@@ -6,8 +6,11 @@ First create the namespace and the resource quota in the namespace.
 
 ```
 $ kubectl create namespace rq-demo
-$ kubectl create -f resourcequota.yaml --namespace=rq-demo
+namespace/rq-demo created
+
+$ kubectl apply -f resourcequota.yaml --namespace=rq-demo
 resourcequota/app created
+
 $ kubectl describe quota --namespace=rq-demo
 Name:            app
 Namespace:       rq-demo
@@ -39,15 +42,16 @@ spec:
 Create the Pod and observe the error message.
 
 ```
-$ kubectl create -f pod.yaml --namespace=rq-demo
+$ kubectl apply -f pod.yaml --namespace=rq-demo
 Error from server (Forbidden): error when creating "pod.yaml": pods "mypod" is forbidden: exceeded quota: app, requested: requests.memory=1Gi, used: requests.memory=0, limited: requests.memory=500Mi
 ```
 
 Lower the memory settings to less than `500Mi` (e.g. `255Mi`) and create the Pod.
 
 ```
-$ kubectl create -f pod.yaml --namespace=rq-demo
+$ kubectl apply -f pod.yaml --namespace=rq-demo
 pod/mypod created
+
 $ kubectl describe quota --namespace=rq-demo
 Name:            app
 Namespace:       rq-demo

@@ -82,7 +82,7 @@ spec:
 Create the Pod object and ensure that its status transitions into "Running".
 
 ```
-$ kubectl create -f nginx-pod.yaml
+$ kubectl apply -f nginx-pod.yaml
 pod/nginx created
 $ kubectl get pod nginx -n h92
 NAME    READY   STATUS    RESTARTS   AGE

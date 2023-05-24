@@ -123,7 +123,7 @@ status: {}
 Create the Pod from the YAML file. During the creation of the Pod you can follow the creation of individual containers.
 
 ```
-$ kubectl create -f business-app.yaml
+$ kubectl apply -f business-app.yaml
 pod/business-app created
 
 $ kubectl get pods

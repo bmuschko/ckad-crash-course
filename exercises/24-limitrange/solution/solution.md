@@ -3,7 +3,7 @@
 Create the objects from the given YAML manifest. The file defines a namespace and a LimitRange object.
 
 ```
-$ kubectl create -f setup.yaml
+$ kubectl apply -f setup.yaml
 namespace/d92 created
 limitrange/cpu-limit-range created
 ```

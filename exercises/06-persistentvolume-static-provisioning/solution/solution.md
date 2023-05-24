@@ -19,7 +19,7 @@ spec:
 Create the PersistentVolume with the following command.
 
 ```
-$ kubectl create -f pv.yaml
+$ kubectl apply -f pv.yaml
 persistentvolume/pv created
 $ kubectl get pv
 NAME   CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
@@ -45,7 +45,7 @@ spec:
 Create the PersistentVolumeClaim with the following command. You will see that the PersistentVolumeClaim has a status of "Bound".
 
 ```
-$ kubectl create -f pvc.yaml
+$ kubectl apply -f pvc.yaml
 persistentvolumeclaim/pvc created
 $ kubectl get pvc
 NAME   STATUS   VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
@@ -76,7 +76,7 @@ spec:
 Create the Pod object from the YAML manifest file.
 
 ```
-$ kubectl create -f pod.yaml
+$ kubectl apply -f pod.yaml
 pod/app created
 ```
 

@@ -44,7 +44,7 @@ status: {}
 You should find that a new text file in the current directory every 20 seconds. Each of the files contain the disk space without the date prefix.
 
 ```
-$ kubectl create -f adapter.yaml
+$ kubectl apply -f adapter.yaml
 $ kubectl exec adapter --container=transformer -it -- /bin/sh
 # cat /var/logs/diskspace.txt
 Tue Nov 12 15:13:48 UTC 2019 | 4.0K	/root

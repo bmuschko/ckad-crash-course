@@ -21,7 +21,7 @@ spec:e
 Create the Job from the YAML manifest:
 
 ```
-$ kubectl create -f random-hash-job.yaml
+$ kubectl apply -f random-hash-job.yaml
 job.batch/random-hash created
 ```
 
