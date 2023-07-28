@@ -12,7 +12,7 @@
 
 In this exercise, you will create a CronJob and render its executions.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a CronJob"](https://learning.oreilly.com/scenarios/ckad-jobs-creating/9781098105297/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating a CronJob"](https://learning.oreilly.com/scenarios/ckad-jobs-creating/9781098105297/).
 
 1. Create a CronJob named `current-date` that runs every minute and executes the shell command `echo "Current date: $(date)"`.
 2. Watch the jobs as they are being scheduled.

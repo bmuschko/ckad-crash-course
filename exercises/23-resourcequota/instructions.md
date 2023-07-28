@@ -12,7 +12,7 @@
 
 In this exercise, you will create a ResourceQuota with specific CPU and memory limits for a new namespace. Pods created in the namespace will have to adhere to those limits.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda lab ["Creating a resource quota for a number of Secrets"](https://learning.oreilly.com/scenarios/ckad-security-creating/9781098104955/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating a resource quota for a number of Secrets"](https://learning.oreilly.com/scenarios/ckad-security-creating/9781098104955/).
 
 Create a resource quota named `app` under the namespace `rq-demo` using the following YAML definition in the file [`resourcequota.yaml`](./resourcequota.yaml).
 

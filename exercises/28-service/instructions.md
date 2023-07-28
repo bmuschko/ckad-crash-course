@@ -12,7 +12,7 @@
 
 In this exercise, you will create a Deployment and expose a container port for its Pods. You will demonstrate the differences between the service types ClusterIP and NodePort.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda labs ["Creating a Service of type ClusterIP"](https://learning.oreilly.com/scenarios/ckad-services-creating/9781098105310/) and ["Creating a Service of type NodePort"](https://learning.oreilly.com/scenarios/ckad-services-creating/9781098105327/). If you are using minikube, the network is limited if using the Docker driver on Darwin, Windows, or WSL, and the Node IP is not reachable directly. Refer to the [documentation](https://minikube.sigs.k8s.io/docs/handbook/accessing/) to gain access to the minikube IP.
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive labs ["Creating a Service of type ClusterIP"](https://learning.oreilly.com/scenarios/ckad-services-creating/9781098105310/) and ["Creating a Service of type NodePort"](https://learning.oreilly.com/scenarios/ckad-services-creating/9781098105327/). If you are using minikube, the network is limited if using the Docker driver on Darwin, Windows, or WSL, and the Node IP is not reachable directly. Refer to the [documentation](https://minikube.sigs.k8s.io/docs/handbook/accessing/) to gain access to the minikube IP.
 
 1. Create a Service named `myapp` of type `ClusterIP` that exposes port 80 and maps to the target port 80.
 2. Create a Deployment named `myapp` that creates 1 replica running the image `nginx:1.23.4-alpine`. Expose the container port 80.
