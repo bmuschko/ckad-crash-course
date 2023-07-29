@@ -66,10 +66,10 @@ Shell into the container named `business-app`. Execute the `curl` command at lea
 
 ```
 $ kubectl exec rate-limiter -it -c business-app -n ext-access -- /bin/sh
-# curl localhost:8080/test
+# curl localhost:8081/test
 {"args":{"test":"123"},"headers":{"x-forwarded-proto":"https", "x-forwarded-port":"443","host":"postman-echo.com", "x-amzn-trace-id":"Root=1-5f177dba-e736991e882d12fcffd23f34"}, "url":"https://postman-echo.com/get?test=123"}
 ...
-# curl localhost:8080/test
+# curl localhost:8081/test
 Too many requests made created from this IP, please try again after an hour
 ```
 
