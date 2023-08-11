@@ -1,6 +1,6 @@
 # Solution
 
-The `run` command is deprecated but it provides a good shortcut for creating a CronJob with a single command.
+The `create cronjob` command provides a good shortcut for creating a CronJob with a single command.
 
 ```
 $ kubectl create cronjob current-date --schedule="* * * * *" --image=nginx -- /bin/sh -c 'echo "Current date: $(date)"'
