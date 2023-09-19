@@ -3,7 +3,7 @@
 The `create cronjob` command provides a good shortcut for creating a CronJob with a single command.
 
 ```
-$ kubectl create cronjob current-date --schedule="* * * * *" --image=nginx -- /bin/sh -c 'echo "Current date: $(date)"'
+$ kubectl create cronjob current-date --schedule="* * * * *" --image=nginx:1.21.6 -- /bin/sh -c 'echo "Current date: $(date)"'
 cronjob.batch/current-date created
 ```
 
