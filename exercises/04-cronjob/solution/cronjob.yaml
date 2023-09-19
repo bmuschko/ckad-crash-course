@@ -15,6 +15,6 @@ spec:
             - /bin/sh
             - -c
             - 'echo "Current date: $(date)"'
-            image: nginx
+            image: nginx:1.21.6
             name: current-date
   schedule: '* * * * *'
