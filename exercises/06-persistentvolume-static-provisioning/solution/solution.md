@@ -3,8 +3,8 @@
 Create a manifest for the PersistentVolume and store it in the file `pv.yaml`.
 
 ```yaml
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
   name: pv
 spec:
@@ -29,8 +29,8 @@ pv     512Mi      RWX            Retain           Available                     
 Create a manifest for the PersistentVolumeClaim and store it in the file `pvc.yaml`.
 
 ```yaml
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: pvc
 spec:
@@ -64,7 +64,7 @@ spec:
   - image: nginx:1.21.6
     name: app
     volumeMounts:
-    - mountPath: "/data/app/config"
+    - mountPath: "/var/app/config"
       name: configpvc
   volumes:
   - name: configpvc
@@ -84,7 +84,7 @@ Shell into the Pod and create a file in the mounted directory.
 
 ```
 $ kubectl exec app -it -- /bin/sh
-# cd /data/app/config
+# cd /var/app/config
 # ls -l
 total 0
 # touch test.txt
