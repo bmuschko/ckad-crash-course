@@ -15,6 +15,7 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 ## Additional Resources
 
 * 💬 [Kubernetes Slack Channel #certifications](https://kubernetes.slack.com/)
+* 📚 [O'Reilly: Certified Kubernetes Application Developer (CKAD) Study Guide, 2nd Edition](https://learning.oreilly.com/library/view/certified-kubernetes-application/9781098152857/)
 * 📚 [O'Reilly: Certified Kubernetes Application Developer (CKAD) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-application/9781492083726/)
 * 📚 [O'Reilly: Certified Kubernetes Administrator (CKA) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-administrator/9781098107215/)
 * 📚 [Matthew Palmer: Golden Guide to Kubernetes Application Development](https://matthewpalmer.net/kubernetes-app-developer)
