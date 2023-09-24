@@ -28,4 +28,4 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * 🧪 [Study4Exam: Certified Kubernetes Application Developer Exam](https://www.study4exam.com/linux-foundation/info/ckad)
 * 🧪 [Dimitris-Ilias Gkanatsios: CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
 * 🧪 [Liptan Biswas: Katacoda Practice Questions](https://dev.to/liptanbiswas/ckad-practice-questions-4mpn)
-* 🧪 [Udemy: Certified Kubernetes Application Developer (CKAD) 2023](https://www.udemy.com/course/ckad-certified-kubernetes-application-developer-exam/)
+* 🧪 [Udemy: Certified Kubernetes Application Developer (CKAD) Practice Test](https://www.udemy.com/course/ckad-certified-kubernetes-application-developer-exam/)
