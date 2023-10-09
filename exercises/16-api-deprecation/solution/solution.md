@@ -103,7 +103,7 @@ spec:
             name: data-config
 ```
 
-Both object can now be created.
+Both objects can now be created.
 
 ```
 $ kubectl apply -f ./
