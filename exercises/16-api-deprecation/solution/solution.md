@@ -34,7 +34,6 @@ policy/v1
 rbac.authorization.k8s.io/v1
 scheduling.k8s.io/v1
 storage.k8s.io/v1
-storage.k8s.io/v1beta1
 v1
 ```
 
