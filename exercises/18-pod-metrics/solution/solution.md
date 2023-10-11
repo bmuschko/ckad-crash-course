@@ -26,4 +26,4 @@ stress-2   74m          138Mi
 stress-3   58m          94Mi
 ```
 
-The Pod with the highest amount of memory consumption is Pod named `stress-2`. The metrics will look different on your machine given that the amount of consumed memory is randomized in the command executed per container.
+The Pod with the highest amount of memory consumption is the Pod named `stress-2`. The metrics will look different on your machine given that the amount of consumed memory is randomized by the command executed per container.
