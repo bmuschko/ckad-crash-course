@@ -1,6 +1,6 @@
 # Solution
 
-This exercise verifies your comfort level with handle API deprecations. If you are tring to create both objects with Kubernetes 1.28, you will find that the API version `apps/v1beta2` assigned to the Deployment definition cannot be found.
+This exercise verifies your comfort level with handle API deprecations. If you are trying to create both objects with Kubernetes 1.28, you will find that the API version `apps/v1beta2` assigned to the Deployment definition cannot be found.
 
 ```
 $ kubectl apply -f ./
