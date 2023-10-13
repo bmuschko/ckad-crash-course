@@ -65,7 +65,7 @@ spec:
             name: data-config
 ```
 
-Trying to create the Deployment object reveals that another portion of the configuration is required with API version `apps/v1`, the label selector of the template.
+Trying to create the Deployment object reveals that you need to define a label selector with API version `apps/v1`.
 
 ```
 $ kubectl apply -f ./
