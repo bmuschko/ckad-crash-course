@@ -1,7 +1,5 @@
 # Solution
 
-Start by creating the Pod definition as YAML file.
-
 First create the namespace and the resource quota in the namespace.
 
 ```
