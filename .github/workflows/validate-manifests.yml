@@ -9,9 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Kubeconform
-        run: |
-            wget https://github.com/yannh/kubeconform/releases/download/v0.6.3/kubeconform-linux-amd64.tar.gz
-            tar xf kubeconform-linux-amd64.tar.gz
-            sudo cp kubeconform /usr/local/bin
+        uses: bmuschko/setup-kubeconform@v1
       - name: Validate Against Kubernetes Schema
         run: kubeconform -kubernetes-version=1.28.3 -ignore-filename-pattern=.github/workflows -ignore-filename-pattern=.json$ -ignore-filename-pattern=exercises/15-helm-build-chart -ignore-filename-pattern=exercises/16-api-deprecation/deployment.yaml -ignore-filename-pattern=exercises/20-crd -ignore-filename-pattern=exercises/25-configmap/application.yaml -summary .
