@@ -6,12 +6,17 @@ If you are using minikube, you will need to use the following command line optio
 
 ```
 $ minikube addons enable ingress
-    ▪ Using image k8s.gcr.io/ingress-nginx/controller:v1.0.4
-    ▪ Using image k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.1.1
-    ▪ Using image k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.1.1
+💡  ingress is an addon maintained by Kubernetes. For any concerns contact minikube on GitHub.
+You can view the list of minikube maintainers at: https://github.com/kubernetes/minikube/blob/master/OWNERS
+💡  After the addon is enabled, please run "minikube tunnel" and your ingress resources would be available at "127.0.0.1"
+    ▪ Using image registry.k8s.io/ingress-nginx/controller:v1.7.0
+    ▪ Using image registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20230312-helm-chart-4.5.2-28-g66a760794
+    ▪ Using image registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20230312-helm-chart-4.5.2-28-g66a760794
 🔎  Verifying ingress addon...
 🌟  The 'ingress' addon is enabled
 ```
+
+> **_IMPORTANT:_** As explained by the output of the command, you will have to run the command `minikube tunnel` later to make the Ingress of the exercise available on `localhost`. Refer to the solution for more information.
 
 The Ingress controller will run as a Pod in the `ingress-nginx` namespace. Make sure that the Pod `ingress-nginx-controller-...` transitions into the "Running" status.
 

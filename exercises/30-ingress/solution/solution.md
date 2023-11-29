@@ -1,14 +1,6 @@
 # Solution
 
-If you are running Minikube you should be able to find the Ingress Controller Pod by running the following command in the `ingress-nginx` namespace.
-
-```
-$ kubectl get pods -n ingress-nginx
-NAME                                        READY   STATUS      RESTARTS   AGE
-...
-ingress-nginx-controller-799c9469f7-d8whx   1/1     Running     0          4h24m
-...
-```
+## Creating the Service
 
 Create the Deployment with the following command.
 
@@ -24,28 +16,27 @@ web    1/1     1            1           6s
 Afterward, expose the application with a Service.
 
 ```
-$ kubectl expose deployment web --type=NodePort --port=3000
+$ kubectl expose deployment web --type=ClusterIP --port=3000
 service/web exposed
 
 $ kubectl get service web
-NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE
-web          NodePort    10.97.2.103   <none>        3000:31769/TCP   5s
+NAME   TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+web    ClusterIP   10.100.86.59   <none>        3000/TCP   6s
 ```
 
-Identify one of the node's IP address.
+Determine the cluster IP and the port for the Service. In this case, it's `10.109.149.59:3000`. Alternatively, you can use the DNS name `web`. Use the information to execute a `wget` command from another Pod.
 
 ```
-$ kubectl get nodes -o wide
-NAME       STATUS   ROLES                  AGE   VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE              KERNEL-VERSION   CONTAINER-RUNTIME
-minikube   Ready    control-plane,master   21h   v1.22.3   192.168.64.38   <none>        Buildroot 2021.02.4   4.19.202         docker://20.10.8
-```
-
-Make a call to the application using the `curl` command. The application will respond with a "Hello World" message.
-
-```
-$ curl 192.168.64.38:31769
+$ kubectl run tmp --image=busybox:1.36.1 --restart=Never -it --rm -- wget -O- web:3000
+Connecting to web:3000 (10.100.86.59:3000)
+writing to stdout
 Hello World
+-                    100% |********************************|    12  0:00:00 ETA
+written to stdout
+pod "tmp" deleted
 ```
+
+## Creating the Ingress
 
 Create an Ingress using the following manifest in the file `ingress.yaml`.
 
@@ -85,18 +76,44 @@ NAME                  CLASS   HOSTS                 ADDRESS         PORTS   AGE
 hello-world-ingress   nginx   hello-world.exposed   192.168.64.38   80      72s
 ```
 
+## Accessing the Ingress
+
+Accessing the Ingress differs depending on the Kubernetes cluster you are using. Follow the instructions in the section based on your Kubernetes cluster setup.
+
+### Using a Regular Kubernetes Cluster
+
 Edit the file `/etc/hosts` via `sudo vim /etc/hosts`. Add the following entry to map the host name `hello-world.exposed` to the node's IP address.
 
 ```
 192.168.64.38 hello-world.exposed
 ```
 
-The Ingress will now render the value `localhost` in the column "ADDRESS".
+Make a `curl` call to the host name mapped by the Ingress. The call should be routed toward the backend and respond with the message "Hello World".
 
 ```
-$ kubectl get ingress hello-world-ingress
-NAME                  CLASS   HOSTS                 ADDRESS     PORTS   AGE
-hello-world-ingress   nginx   hello-world.exposed   localhost   80      79s
+$ curl hello-world.exposed
+Hello World
+```
+
+### Using Minikube
+
+Minikube requires you to open a tunnel before you can access an ingress. In a new terminal window, run the following command and leave it running.
+
+```
+$ minikube tunnel
+✅  Tunnel successfully started
+
+📌  NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ...
+
+❗  The service/ingress hello-world-ingress requires privileged ports to be exposed: [80 443]
+🔑  sudo permission will be asked for it.
+🏃  Starting tunnel for service hello-world-ingress.
+```
+
+Edit the file `/etc/hosts` via `sudo vim /etc/hosts`. Add the following entry to map the host name `hello-world.exposed` to the IP address `127.0.0.1`. **Do not use the minikube IP address here, as it is not exposed to the host.**
+
+```
+127.0.0.1 hello-world.exposed
 ```
 
 Make a `curl` call to the host name mapped by the Ingress. The call should be routed toward the backend and respond with the message "Hello World".
