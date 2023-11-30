@@ -7,7 +7,7 @@ $ kubectl create secret generic db-credentials --from-literal=db-password=passwd
 secret/db-credentials created
 ```
 
-The imperative command automatically base64-encodes the provided value of the literal. You can render the details of the Scret object from the command line. The assigned value to the key `db-password` is `cGFzc3dk`.
+The imperative command automatically base64-encodes the provided value of the literal. You can render the details of the Secret object from the command line. The assigned value to the key `db-password` is `cGFzc3dk`.
 
 ```
 $ kubectl get secret db-credentials -o yaml
