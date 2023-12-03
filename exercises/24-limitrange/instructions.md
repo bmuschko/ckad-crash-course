@@ -14,6 +14,6 @@ A LimitRange can restrict resource consumption for Pods in a namespace, and assi
 
 1. Inspect the YAML manifest definition in the file [`setup.yaml`](./setup.yaml).
 2. Create the objects from the YAML manifest file.
-3. Create a new Pod named `pod-without-resource-requirements` in the namespace `d92` that uses the container image `bmuschko/nodejs-hello-world:1.0.0` without any resource requirements. Inspect the Pod details. What resource definitions do you expect to be assigned?
-4. Create a new Pod named `pod-with-more-cpu-resource-requirements` in the namespace `d92` that uses the container image `bmuschko/nodejs-hello-world:1.0.0` with a CPU resource request of 400m and limits of 1.5. What runtime behavior do you expect to see?
-5. Create a new Pod named `pod-with-less-cpu-resource-requirements` in the namespace `d92` that uses the container image `bmuschko/nodejs-hello-world:1.0.0` with a CPU resource request of 350m and limits of 400m. What runtime behavior do you expect to see?
+3. Create a new Pod named `pod-without-resource-requirements` in the namespace `d92` that uses the container image `nginx:1.23.4-alpine` without any resource requirements. Inspect the Pod details. What resource definitions do you expect to be assigned?
+4. Create a new Pod named `pod-with-more-cpu-resource-requirements` in the namespace `d92` that uses the container image `nginx:1.23.4-alpine` with a CPU resource request of 400m and limits of 1.5. What runtime behavior do you expect to see?
+5. Create a new Pod named `pod-with-less-cpu-resource-requirements` in the namespace `d92` that uses the container image `nginx:1.23.4-alpine` with a CPU resource request of 350m and limits of 400m. What runtime behavior do you expect to see?
