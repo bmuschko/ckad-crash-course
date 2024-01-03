@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: web
 spec:
-  ports:
-  - port: 3000
-    protocol: TCP
-    targetPort: 3000
+  type: ClusterIP
   selector:
     app: web
-  type: NodePort
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
