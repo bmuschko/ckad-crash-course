@@ -82,7 +82,7 @@ Accessing the Ingress differs depending on the Kubernetes cluster you are using.
 
 ### Using a Regular Kubernetes Cluster
 
-Edit the file `/etc/hosts` via `sudo vim /etc/hosts`. Add the following entry to map the host name `hello-world.exposed` to the node's IP address.
+Edit the file `/etc/hosts` via `sudo vim /etc/hosts`. Add the following entry to map the host name `hello-world.exposed` to the load balancer's IP address.
 
 ```
 192.168.64.38 hello-world.exposed
