@@ -4,6 +4,8 @@
 
 If you are using minikube, you will need to use the following command line options when starting the cluster. This will prepare the cluster for the installation of Cilium. Refer to the [Cilium documentation](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/) for more information.
 
+> **_IMPORTANT:_** From minikube v1.12.1+, you simply install the Cilium CNI plugin using the command `minikube start --cni=cilium`. You can skip the instructions below.
+
 ```
 $ minikube start --network-plugin=cni --cni=false
 ```
