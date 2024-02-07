@@ -10,7 +10,7 @@
 </p>
 </details>
 
-In this exercise, you will practice building a container image from an existing `Dockerfile`. Then you will run the container from the image, and interact with it. You can use a container runtime engine of your choice, e.g. [Docker Engine](https://docs.docker.com/engine/), [containerd](https://containerd.io/).
+In this exercise, you will practice building a container image from an existing `Dockerfile`. Then you will run the container from the image, and interact with it. You can use a container runtime engine of your choice, e.g. [Docker Engine](https://docs.docker.com/engine/), [Podman](https://podman.io/).
 
 1. Inspect the [`Dockerfile`](./app/Dockerfile) in the `app` directory.
 2. Build the container image from the `Dockerfile` with the tag `nodejs-hello-world:1.0.0`.
