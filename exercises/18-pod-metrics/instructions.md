@@ -10,7 +10,7 @@
 </p>
 </details>
 
-> [!NOTE]
+> [!IMPORTANT]
 > You will need to install the metrics server if you want to be able to inspect actual resource metrics. You can find [installation instructions](https://github.com/kubernetes-sigs/metrics-server#installation) on the project's GitHub page.
 
 1. Create the namespace `stress-test`.

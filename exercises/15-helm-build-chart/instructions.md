@@ -12,6 +12,9 @@
 
 In this exercise, you will practice the implementation, packaging, and installation of a configurable custom Helm chart.
 
+> [!IMPORTANT]
+> You will need to have Helm installed on your machine. The Helm documentation page provides detailed, OS-specific [installation instructions](https://helm.sh/docs/intro/install/).
+
 1. Create a new chart file named `Chart.yaml`. Define all mandatory attributes including the chart's API version, the name, and the version. Add the following key-value pairs: `API version: 1.0.0`, `Name: web-app`, and `Version: 2.5.4`.
 2. Create a new values file named `values.yaml`. It should contain the following key-value pairs: `service_port: 80`, and `container_port: 3000`.
 3. Create the template file `web-app-pod-template.yaml`. The YAML manifest defines a Pod named `hello-world` with the image `bmuschko/nodejs-hello-world:1.0.0`. The container port uses the placeholder `container_port` from the `values.yaml` file.

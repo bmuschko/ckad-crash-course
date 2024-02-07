@@ -12,7 +12,7 @@
 
 In this exercise, you use Helm to install Kubernetes objects needed for the open source monitoring solution [Prometheus](https://prometheus.io/). The easiest way to install Prometheus on top of Kubernetes is with the help of the [prometheus-operator](https://prometheus-operator.dev/) Helm chart.
 
-> [!NOTE]
+> [!IMPORTANT]
 > You will need to have Helm installed on your machine. The Helm documentation page provides detailed, OS-specific [installation instructions](https://helm.sh/docs/intro/install/).
 
 1. The Prometheus Helm charts reside in the [artifact repository](https://prometheus-community.github.io/helm-charts). Add the repository to the list of known repositories accessible by Helm with the name `prometheus-community`.
