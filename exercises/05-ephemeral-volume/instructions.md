@@ -10,10 +10,10 @@
 </p>
 </details>
 
+In this exercise, you will create a Pod that runs the web server [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/). Nginx requires certains directory paths to be writable. We'll mount ephemeral Volumes to make those paths available to container.
+
 > [!NOTE]
 > If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating a Pod with Volume of Type emptydir"](https://learning.oreilly.com/scenarios/creating-a-pod/9781098163907/).
-
-In this exercise, you will create a Pod that runs the web server [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/). Nginx requires certains directory paths to be writable. We'll mount ephemeral Volumes to make those paths available to container.
 
 1. Create a Pod named `nginx` in the namespace `h92`. Its container should run the container image `nginx:1.21.6`.
 2. Define a Volume of type `emptyDir` named `nginx-run` which mounts the path `/var/run` to the container.
