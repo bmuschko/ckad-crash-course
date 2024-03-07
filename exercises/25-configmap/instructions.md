@@ -13,7 +13,7 @@
 In this exercise, you will first create a ConfigMap from a YAML configuration file as a source. Later, you'll create a Pod, consume the ConfigMap as Volume and inspect the key-value pairs as files.
 
 > [!NOTE]
-> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating a ConfigMap and consuming it as environment variables"](https://learning.oreilly.com/scenarios/ckad-configuration-creating/9781098104917/).
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating a ConfigMap and Consuming It as Volume"](https://learning.oreilly.com/scenarios/creating-a-configmap/9781098164225/).
 
 1. Inspect the YAML configuration file named [`application.yaml`](./application.yaml).
 2. Create a new ConfigMap named `app-config` from that file.

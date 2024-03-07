@@ -12,6 +12,9 @@
 
 As an application developer, you may want to install Kubernetes functionality that exends the platform using the Kubernetes operator pattern. The objective of this exercise is to familiarize yourself with creating and managing CRDs. You will not need to write a controller.
 
+> [!NOTE]
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Defining and Interacting with a CRD"](https://learning.oreilly.com/scenarios/defining-and-interacting/9781098164164/).
+
 1. Create a CRD resource named `backup.example.com` with the following specification:
 
     - Group: `example.com`

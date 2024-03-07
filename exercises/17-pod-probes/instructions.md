@@ -13,7 +13,7 @@
 In this exercise, you will create a Pod running a NodeJS application. The Pod will define readiness and liveness probes with different parameters.
 
 > [!NOTE]
-> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating a Pod with a readiness Probe of type HTTP GET request"](https://learning.oreilly.com/scenarios/ckad-probing-creating/9781098105105/).
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating a Pod with a Readiness Probe of Type HTTP GET Request"](https://learning.oreilly.com/scenarios/creating-a-pod/9781098164102/).
 
 1. Create a new Pod named `hello` with the image `bmuschko/nodejs-hello-world:1.0.0` that exposes the port 3000. Provide the name `nodejs-port` for the container port.
 2. Add a Readiness Probe that checks the URL path / on the port referenced with the name `nodejs-port` after a 2 seconds delay. You do not have to define the period interval.

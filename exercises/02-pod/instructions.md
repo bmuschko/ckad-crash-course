@@ -13,7 +13,7 @@
 In this exercise, you will practice the creation of a new Pod in a namespace. Once created, you will inspect it, shell into it and run some operations inside of the container.
 
 > [!NOTE]
-> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Creating and interacting with a Pod"](https://learning.oreilly.com/scenarios/ckad-pods-creating/9781098104818/).
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive labs ["Creating and Interacting with a Pod in a Namespace"](https://learning.oreilly.com/scenarios/creating-and-interacting/9781098163846/), ["Creating a Pod that Uses a Custom Command"](https://learning.oreilly.com/scenarios/creating-a-pod/9781098163853/), and ["Modifying the Configuration of an Existing Pod"](https://learning.oreilly.com/scenarios/modifying-the-configuration/9781098163860/).
 
 1. Create the namespace `ckad-prep`.
 2. In the namespace `ckad-prep`, create a new Pod named `mypod` with the image `nginx:2.3.5`. Expose the port 80.

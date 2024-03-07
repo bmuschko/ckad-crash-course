@@ -12,6 +12,9 @@
 
 In this exercise, you will define Role Based Access Control (RBAC) to grant permissions to a service account. The permissions should only apply to certain API resources and operations.
 
+> [!NOTE]
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Regulating Access to API Resources with RBAC"](https://learning.oreilly.com/scenarios/regulating-access-to/9781098164171/).
+
 1. Create a new namespace named `t23`.
 2. Create a Pod named `service-list` in the namespace `t23`. The container uses the image `alpine/curl:3.14` and makes a `curl` call to the Kubernetes API that lists Service objects in the `default` namespace in an infinite loop.
 3. Create and attach the service account `api-call` to the Pod.

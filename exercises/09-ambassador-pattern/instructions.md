@@ -15,7 +15,7 @@ In this example, you'll be asked to implement rate-limiting functionality for HT
 The image `bmuschko/nodejs-business-app:1.0.0` represents a Node.js-based application that makes a call to localhost on port 8081. The ambassador container represented by the image `bmuschko/nodejs-ambassador:1.0.0` running on port 8081 will take on making the HTTP call to the external service while at the same time enforcing rate limiting.
 
 > [!NOTE]
-> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Implementing the Ambassador Pattern"](https://www.katacoda.com/orm-benjamin-muschko/courses/ckad-assessment/ambassador-pattern/).
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Implementing the Ambassador Pattern"](https://learning.oreilly.com/scenarios/implementing-the-ambassador/9781098163945/).
 
 1. Create a YAML manifest for a Pod with the name `rate-limiter` in the namespace `ext-access`. Store the definition in the file named `rate-limiter.yaml`. The main application container named `business-app` should use the image `bmuschko/nodejs-business-app:1.0.0` and expose the container port 8080.
 2. Modify the YAML manifest by adding the ambassador container named `ambassador`. The ambassador container uses the image `bmuschko/nodejs-ambassador:1.0.0` and exposes the container port 8081.
