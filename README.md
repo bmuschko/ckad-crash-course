@@ -20,6 +20,11 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * 📚 [O'Reilly: Certified Kubernetes Administrator (CKA) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-administrator/9781098107215/)
 * 📚 [Matthew Palmer: Golden Guide to Kubernetes Application Development](https://matthewpalmer.net/kubernetes-app-developer)
 * ✍🏻 [Benjamin Muschko: Crushing the Certified Kubernetes Application Developer (CKAD) exam](https://bmuschko.com/blog/ckad-prep/)
+* 🎞️ O'Reilly: Certified Kubernetes Application Developer (CKAD) Prep Course
+    * [Exam Overview and Introduction to Kubernetes](https://learning.oreilly.com/course/certified-kubernetes-application/0636920998556/)
+    * [Application Design and Build](https://learning.oreilly.com/videos/certified-kubernetes-application/0636920907237/)
+    * [Application Deployment, Observability and Maintenance](https://learning.oreilly.com/course/certified-kubernetes-application/0636920998747/)
+    * [Application Environment, Configuration and Security, Services and Networking](https://learning.oreilly.com/course/certified-kubernetes-application/0636920998785/)
 * 🎞️ [LinkedIn Learning: Certified Kubernetes Application Developer (CKAD) Cert Prep: Exam Tips](https://www.linkedin.com/learning/certified-kubernetes-application-developer-ckad-cert-prep-exam-tips)
 * 🎞️ [KodeKloud: Certified Kubernetes Application Developer (CKAD)](https://kodekloud.com/p/kubernetes-certification-course)
 * 🎞️ [Udemy: CKAD Certified Kubernetes Application Developer Crash Course](https://www.udemy.com/course/ckad-certified-kubernetes-application-developer/)
