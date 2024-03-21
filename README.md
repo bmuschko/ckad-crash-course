@@ -19,7 +19,7 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * 📚 [O'Reilly: Certified Kubernetes Application Developer (CKAD) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-application/9781492083726/)
 * 📚 [O'Reilly: Certified Kubernetes Administrator (CKA) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-administrator/9781098107215/)
 * ✍🏻 [Benjamin Muschko: Crushing the Certified Kubernetes Application Developer (CKAD) exam](https://bmuschko.com/blog/ckad-prep/)
-* 🎞️ O'Reilly: Certified Kubernetes Application Developer (CKAD) Prep Course
+* 🎞️ [O'Reilly: Certified Kubernetes Application Developer (CKAD) Prep Course](https://learning.oreilly.com/playlists/3827a5ce-f33f-45c7-80f3-4deab4115523/)
     * Part 1: [Exam Overview and Introduction to Kubernetes](https://learning.oreilly.com/course/certified-kubernetes-application/0636920998556/)
     * Part 2: [Application Design and Build](https://learning.oreilly.com/videos/certified-kubernetes-application/0636920907237/)
     * Part 3: [Application Deployment, Observability and Maintenance](https://learning.oreilly.com/course/certified-kubernetes-application/0636920998747/)
