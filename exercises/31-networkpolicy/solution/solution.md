@@ -23,7 +23,7 @@ NAME    READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NOD
 nginx   1/1     Running   0          14s   10.0.0.101   minikube   <none>           <none>
 ```
 
-Open a connection to the Pod `nginx` won't be allowed and times out.
+Opening a connection to the Pod `nginx` won't be allowed and times out.
 
 ```
 $ kubectl exec -it busybox -n k1 -- wget --timeout=5 10.0.0.101:80
