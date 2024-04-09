@@ -63,7 +63,7 @@ service/nginx created
 Now, check to ensure that the Pods can be reached using a `curl` command from a temporary Pod. The returned headers will include the nginx server version.
 
 ```
-$ kubectl run tmp --image=alpine/curl:3.14 --restart=Never -it --rm -- curl -sI nginx.default.svc.cluster.local | grep Server
+$ kubectl run tmp --image=alpine/curl:8.5.0 --restart=Never -it --rm -- curl -sI nginx.default.svc.cluster.local | grep Server
 Server: nginx/1.23.0
 ```
 
@@ -137,6 +137,6 @@ deployment.apps "nginx-blue" deleted
 Incoming traffic to the Service endpoint should now be switched over to the Pods controlled by the green Deployment.
 
 ```
-$ kubectl run tmp --image=alpine/curl:3.14 --restart=Never -it --rm -- curl -sI nginx.default.svc.cluster.local | grep Server
+$ kubectl run tmp --image=alpine/curl:8.5.0 --restart=Never -it --rm -- curl -sI nginx.default.svc.cluster.local | grep Server
 Server: nginx/1.23.4
 ```
