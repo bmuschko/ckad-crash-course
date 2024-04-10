@@ -16,7 +16,7 @@ In this exercise, you will practice the implementation, packaging, and installat
 > You will need to have Helm installed on your machine. The Helm documentation page provides detailed, OS-specific [installation instructions](https://helm.sh/docs/intro/install/).
 
 > [!NOTE]
-> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Installing an Existing Helm Chart from the Central Chart Repository"](https://learning.oreilly.com/scenarios/installing-an-existing/9781098164065/).
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Implementing, Packaging, and Installing a Custom Helm Chart"](https://learning.oreilly.com/scenarios/implementing-packaging-and/9781098164072/).
 
 1. Create a new chart file named `Chart.yaml`. Define all mandatory attributes including the chart's API version, the name, and the version. Add the following key-value pairs: `API version: 1.0.0`, `Name: web-app`, and `Version: 2.5.4`.
 2. Create a new values file named `values.yaml`. It should contain the following key-value pairs: `service_port: 80`, and `container_port: 3000`.
