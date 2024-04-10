@@ -15,6 +15,9 @@ In this exercise, you use Helm to install Kubernetes objects needed for the open
 > [!IMPORTANT]
 > You will need to have Helm installed on your machine. The Helm documentation page provides detailed, OS-specific [installation instructions](https://helm.sh/docs/intro/install/).
 
+> [!NOTE]
+> If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Installing an Existing Helm Chart from the Central Chart Repository"](https://learning.oreilly.com/scenarios/installing-an-existing/9781098164065/).
+
 1. The Prometheus Helm charts reside in the [artifact repository](https://prometheus-community.github.io/helm-charts). Add the repository to the list of known repositories accessible by Helm with the name `prometheus-community`.
 2. Update to the latest information about charts from the respective chart repository.
 3. Run the Helm command for listing available Helm charts and their versions. Identify the latest chart version for `kube-prometheus-stack`.
