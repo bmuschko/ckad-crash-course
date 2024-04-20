@@ -43,7 +43,7 @@ pod/myapp-7d6cd46d65-jrc2q   1/1     Running   0          106s
 Determine the cluster IP and the port for the Service. In this case, it's `10.109.149.59:80`. Alternatively, you can use the DNS name `myapp`. Use the information with the `wget` command.
 
 ```
-$ kubectl run tmp --image=busybox --restart=Never -it --rm -- wget -O- 10.109.149.59:80
+$ kubectl run tmp --image=busybox:1.36.1 --restart=Never -it --rm -- wget -O- 10.109.149.59:80
 Connecting to 10.109.149.59:80 (10.109.149.59:80)
 writing to stdout
 <!DOCTYPE html>

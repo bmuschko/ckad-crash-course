@@ -4,7 +4,7 @@ metadata:
   name: frontend
 spec:
   containers:
-  - image: nginx
+  - image: nginx:1.25.5-alpine
     name: nginx
   restartPolicy: Never
 ---
@@ -14,7 +14,7 @@ metadata:
   name: backend
 spec:
   containers:
-  - image: nginx
+  - image: nginx:1.25.5-alpine
     name: nginx
   restartPolicy: Never
 ---
@@ -24,6 +24,6 @@ metadata:
   name: database
 spec:
   containers:
-  - image: nginx
+  - image: nginx:1.25.5-alpine
     name: nginx
   restartPolicy: Never

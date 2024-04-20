@@ -39,7 +39,7 @@ metadata:
 spec:
   initContainers:
   - name: configurer
-    image: busybox
+    image: busybox:1.36.1
   containers:
   - image: bmuschko/nodejs-read-config:1.0.0
     name: web
@@ -62,7 +62,7 @@ metadata:
 spec:
   initContainers:
   - name: configurer
-    image: busybox
+    image: busybox:1.36.1
     volumeMounts:
     - name: configdir
       mountPath: "/usr/shared/app"
@@ -94,7 +94,7 @@ metadata:
 spec:
   initContainers:
   - name: configurer
-    image: busybox
+    image: busybox:1.36.1
     command:
     - wget
     - "-O"

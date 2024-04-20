@@ -30,7 +30,7 @@ replicaset.apps/web-app-5f77f59c78   2         2         2       10m
 The Service named `web-app` is of type `ClusterIP`. You can only access the Service from within the cluster. Trying to connect to the Service by its DNS name from a temporary Pod in the same namespace won't be allowed.
 
 ```
-$ kubectl run tmp --image=busybox --restart=Never -it --rm -n y72 -- wget web-app
+$ kubectl run tmp --image=busybox:1.36.1 --restart=Never -it --rm -n y72 -- wget web-app
 Connecting to web-app (10.106.215.153:80)
 wget: can't connect to remote host (10.106.215.153): Connection refused
 pod "tmp" deleted
@@ -84,7 +84,7 @@ service/web-app edited
 After changing the Service configuration, you will find that you can open a connection to the Pod running the application.
 
 ```
-$ kubectl run tmp --image=busybox --restart=Never -it --rm -n y72 -- wget web-app
+$ kubectl run tmp --image=busybox:1.36.1 --restart=Never -it --rm -n y72 -- wget web-app
 Connecting to web-app (10.106.215.153:80)
 saving to 'index.html'
 index.html           100% |********************************|    12  0:00:00 ETA

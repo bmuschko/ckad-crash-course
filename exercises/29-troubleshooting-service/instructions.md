@@ -17,5 +17,5 @@ Kate is an developer in charge of implementing a web-based application stack. Sh
 
 1. Create the objects from the YAML manifest [setup.yaml](./setup.yaml).
 2. Inspect the objects in the namespace `y72`.
-3. Create a temporary Pod using the image `busybox` in the namespace `y72`. The container command should make a `wget` call to the Service `web-app`. The `wget` will not be able to establish a successful connection to the Service.
+3. Create a temporary Pod using the image `busybox:1.36.1` in the namespace `y72`. The container command should make a `wget` call to the Service `web-app`. The `wget` will not be able to establish a successful connection to the Service.
 4. Identify the root cause for the connection issue and fix it. Verify the correct behavior by repeating the previous step. The `wget` call should return a sucessful response.

@@ -15,7 +15,7 @@ In this exercise, you will exercise assigning labels and annotations to a set of
 > [!NOTE]
 > If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive labs ["Assigning Labels to Pods Imperatively"](https://learning.oreilly.com/scenarios/assigning-labels-to/9781098163952/) and ["Assigning Annotations to Pods Imperatively"](https://learning.oreilly.com/scenarios/assigning-annotations-to/9781098163976/).
 
-1. Create three different Pods with the names `frontend`, `backend` and `database` that use the image `nginx`. For convenience, you can use the file [`pods.yaml`](./pods.yaml) to create the Pods.
+1. Create three different Pods with the names `frontend`, `backend` and `database` that use the image `nginx:1.25.5-alpine`. For convenience, you can use the file [`pods.yaml`](./pods.yaml) to create the Pods.
 2. Declare labels for those Pods, as follows:
 
 - `frontend`: `env=prod`, `team=shiny`
