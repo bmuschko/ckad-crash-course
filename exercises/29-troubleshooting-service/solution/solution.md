@@ -66,7 +66,7 @@ Session Affinity:  None
 Events:            <none>
 ```
 
-Upon inspecting the Deployment, you will find that the Pod template uses the label assignment `app=webapp`. The container port is set to 3000. This information doesn't match with the configuration of the Service. The endpoints of the `web-app` Service now points to the IP address and container port of the replicas controlled by the Deployment.
+Upon inspecting the Deployment, you will find that the Pod template uses the label assignment `app=web-app`. The container port is set to 3000. This information doesn't match with the configuration of the Service. The endpoints of the `web-app` Service now points to the IP address and container port of the replicas controlled by the Deployment.
 
 ```
 $ kubectl get endpoints -n y72
@@ -74,7 +74,7 @@ NAME      ENDPOINTS                         AGE
 web-app   10.244.0.3:3000,10.244.0.4:3000   24m
 ```
 
-Edit the live object of the Service. Change the label selector from `run=myapp` to `app=webapp`, and the target port from 3001 to 3000.
+Edit the live object of the Service. Change the label selector from `run=myapp` to `app=web-app`, and the target port from 3001 to 3000.
 
 ```
 $ kubectl edit service web-app -n y72
