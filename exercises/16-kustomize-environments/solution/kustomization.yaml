@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+secretGenerator:
+- name: creds
+  namespace: q71
+  files:
+  - basic-auth.txt
+resources:
+- namespace.yaml
+- deployment.yaml
+patches:
+- path: secret-patch.yaml
