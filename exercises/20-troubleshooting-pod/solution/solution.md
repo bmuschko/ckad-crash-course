@@ -52,7 +52,6 @@ PID   USER     TIME  COMMAND
 Apparently, the directory we want to write to does indeed not exist.
 
 ```
-$ kubectl exec failing-pod -it -- /bin/sh
 / # ls /root/tmp
 ls: /root/tmp: No such file or directory
 ```
