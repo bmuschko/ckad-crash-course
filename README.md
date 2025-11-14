@@ -24,4 +24,5 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * 🎞️ [KodeKloud: Certified Kubernetes Application Developer (CKAD)](https://kodekloud.com/p/kubernetes-certification-course)
 * 🧪 [O'Reilly: CKAD Interactive Practice Labs](https://learning.oreilly.com/playlists/2e9fe6dc-2a05-47fe-ae0a-34d6485287cc/)
 * 🧪 [Killer Shell: CKAD Simulator](https://killer.sh/ckad)
+* 🧪 [KillerCoda: CKA Scenarios](https://killercoda.com/cka)
 * 🧪 [Dimitris-Ilias Gkanatsios: CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
