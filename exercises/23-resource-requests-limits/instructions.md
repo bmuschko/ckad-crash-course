@@ -16,7 +16,7 @@ You have been tasked with creating a Pod for running an application in container
 > If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Defining Container Resource Requests and Limits"](https://learning.oreilly.com/scenarios/defining-container-resource/9781098164188/).
 
 1. Define a Pod named `hello-world` running the container image `bmuschko/nodejs-hello-world:1.0.0`. The container exposes the port 3000.
-2. Add a Volume of type `emptyDir` and mount it the container path `/var/log`.
+2. Add a Volume of type `emptyDir` and mount it to the container path `/var/log`.
 3. For the container, specify the following minimum number of resources as follows:
 
     - CPU: 100m

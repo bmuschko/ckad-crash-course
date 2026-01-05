@@ -30,7 +30,7 @@ Execute the `run` command in combination with the `--dry-run` flag to generate t
 $ kubectl run backend --image=nginx:1.23.4-alpine -o yaml --dry-run=client --restart=Never > pod.yaml
 ```
 
-Edit the YAML file and create an environment that reads the key from the secret while assigning a new same for it.
+Edit the YAML file and create an environment that reads the key from the secret while assigning a new name for it.
 
 ```yaml
 apiVersion: v1
@@ -67,6 +67,6 @@ DB_PASSWORD=passwd
 
 ## Optional
 
->  What is one of the benefit of using a Secret over a ConfigMap?
+>  What is one of the benefits of using a Secret over a ConfigMap?
 
 A Secret is distributed only to the nodes running Pods that actually require access to it. Moreover, Secrets are stored in memory and are never written to a physical storage.

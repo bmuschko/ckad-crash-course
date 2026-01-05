@@ -1,4 +1,4 @@
-Add the Helm chart repository using the provided the URL. The name assigned to the URL is `prometheus-community`.
+Add the Helm chart repository using the provided URL. The name assigned to the URL is `prometheus-community`.
 
 ```
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
@@ -14,7 +14,7 @@ Hang tight while we grab the latest from your chart repositories...
 Update Complete. ⎈Happy Helming!⎈
 ```
 
-You can search published chart versions in the the repository named `prometheus-community`.
+You can search published chart versions in the repository named `prometheus-community`.
 
 ```
 $ helm search hub prometheus-community

@@ -1,6 +1,6 @@
 # Prerequisites
 
-Excercise will require the tooling listed below. Ensure that all of those tools have been installed before attending the training if you want to following along. The training does not reserve time for setting up or verifying the installed tools or their respective versions.
+Exercises will require the tooling listed below. Ensure that all of those tools have been installed before attending the training if you want to follow along. The training does not reserve time for setting up or verifying the installed tools or their respective versions.
 
 ## Installing Kubernetes
 

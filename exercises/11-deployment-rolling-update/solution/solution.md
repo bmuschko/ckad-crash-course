@@ -127,6 +127,6 @@ Pod Template:
 
 A rolling deployment ensures zero downtime which has the side effect of having two different versions of a container running at the same time. This can become an issue if you introduce backward-incompatible changes to your public API. A client might hit either the old or new service API.
 
-> How do you configure a update process that first kills all existing containers with the current version before it starts containers with the new version?
+> How do you configure an update process that first kills all existing containers with the current version before it starts containers with the new version?
 
 You can configure the deployment use the `Recreate` strategy. This strategy first kills all existing containers for the deployment running the current version before starting containers running the new version.

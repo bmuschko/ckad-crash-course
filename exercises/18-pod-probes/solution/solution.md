@@ -1,6 +1,6 @@
 # Solution
 
-Create the intial YAML with the following command.
+Create the initial YAML with the following command.
 
 ```
 $ kubectl run hello --image=bmuschko/nodejs-hello-world:1.0.0 --port=3000 -o yaml --dry-run=client --restart=Never > pod.yaml

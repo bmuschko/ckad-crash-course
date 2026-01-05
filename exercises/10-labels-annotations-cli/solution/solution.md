@@ -42,7 +42,7 @@ metadata:
 ...
 ```
 
-Render all Pods and their Pods including their assigned labels.
+Render all Pods including their assigned labels.
 
 ```
 $ kubectl get pods --show-labels

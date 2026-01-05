@@ -45,7 +45,7 @@ NAME      ENDPOINTS   AGE
 web-app   <none>      15m
 ```
 
-Describing the Service object provides you will additional information, e.g. the label selector and the target port.
+Describing the Service object provides you with additional information, e.g. the label selector and the target port.
 
 ```
 $ kubectl describe service web-app -n y72

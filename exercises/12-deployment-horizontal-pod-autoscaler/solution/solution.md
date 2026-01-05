@@ -47,7 +47,7 @@ NAME                    READY   STATUS    RESTARTS   AGE
 nginx-5bbd9746c-9b4np   1/1     Running   0          24s
 ```
 
-Next up, define the HorizontalPodAutoscaler with the given resource thresholds in the file `nginx-hpa.yaml`. The final manifest is show below.
+Next up, define the HorizontalPodAutoscaler with the given resource thresholds in the file `nginx-hpa.yaml`. The final manifest is shown below.
 
 ```yaml
 apiVersion: autoscaling/v2
@@ -83,7 +83,7 @@ $ kubectl apply -f nginx-hpa.yaml
 horizontalpodautoscaler.autoscaling/nginx-hpa created
 ```
 
-Upon inspection of the HorizontalPodAutoscaler object, you will find that the the number of replicas will be scaled up to the minimum number 3 even though the Deployment only defines a single replica. At the time of running the command below, Pods are not using a significant amount of CPU and memory. That's why the current metrics show 0%.
+Upon inspection of the HorizontalPodAutoscaler object, you will find that the number of replicas will be scaled up to the minimum number 3 even though the Deployment only defines a single replica. At the time of running the command below, Pods are not using a significant amount of CPU and memory. That's why the current metrics show 0%.
 
 ```
 $ kubectl get hpa nginx-hpa

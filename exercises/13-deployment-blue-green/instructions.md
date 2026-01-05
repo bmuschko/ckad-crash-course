@@ -10,7 +10,7 @@
 </p>
 </details>
 
-In this exercise, you will set up a blue-green Deployment scenario. You'll first create the initial (blue) Deployment and expose it will a Service. Later, you will create a second (green) Deployment and switch over traffic.
+In this exercise, you will set up a blue-green Deployment scenario. You'll first create the initial (blue) Deployment and expose it with a Service. Later, you will create a second (green) Deployment and switch over traffic.
 
 > [!NOTE]
 > If you do not already have a cluster, you can create one by using minikube or you can use the O'Reilly interactive lab ["Implementing the Blue-Green Deployment Strategy"](https://learning.oreilly.com/scenarios/implementing-the-blue-green/9781098164041/).

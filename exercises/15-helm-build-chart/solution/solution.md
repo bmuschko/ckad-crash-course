@@ -118,5 +118,5 @@ Uninstall the chart with the following command. Make sure to provide the namespa
 
 ```
 $ helm uninstall hello-world -n web-app
-release "hello-world" uninstalle
+release "hello-world" uninstalled
 ```

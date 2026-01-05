@@ -75,7 +75,7 @@ First, install Cilium 1.11.6. This assumes that you have Helm installed already.
 $ helm repo add cilium https://helm.cilium.io/
 $ helm install cilium cilium/cilium --version 1.11.6 --namespace kube-system
 ```
-Cilium provides a CLI tool for interating with the Cilium installation. The following commands install the CLI tool and ensure that the Cilium installation is ready to be used.
+Cilium provides a CLI tool for interacting with the Cilium installation. The following commands install the CLI tool and ensure that the Cilium installation is ready to be used.
 
 ```
 $ curl -L --remote-name-all https://github.com/cilium/cilium-cli/releases/latest/download/cilium-linux-amd64.tar.gz{,.sha256sum}
