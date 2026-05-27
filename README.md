@@ -26,3 +26,4 @@ All [exercises](./exercises) are numbered and live in dedicated directories star
 * 🧪 [Killer Shell: CKAD Simulator](https://killer.sh/ckad)
 * 🧪 [KillerCoda: CKAD Scenarios](https://killercoda.com/ckad)
 * 🧪 [Dimitris-Ilias Gkanatsios: CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
+* 🧪 [RX-M: CKAD Self-Study Course](https://rx-m.com/ckad-online-self-study-training-certification/)
